@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  @apply h-full;
+  @apply bg-gray-800;
+  @apply font-sans text-white text-xl;
+}
+
+phrase-game {
+  @apply hidden;
+}
+
+.in-room #zero {
+  @apply hidden;
+}
+.in-room phrase-game {
+  @apply block w-full h-full flex flex-col;
+}
+
+input,
+textarea {
+  @apply rounded py-2 px-3 bg-gray-900 border border-gray-700;
+}
+
+.btn {
+  @apply bg-purple-700 block rounded p-3;
+}
+
+.fill-team-red {
+  @apply bg-pink-700 text-white border-pink-800 border;
+}
+
+.fill-team-blue {
+  @apply bg-blue-700 text-white border-blue-800 border;
+}
+
+.text-team-red {
+  @apply text-pink-600;
+}
+
+.text-team-blue {
+  @apply text-blue-400;
+}
+
+[discarded] {
+  opacity: 0.5;
+}

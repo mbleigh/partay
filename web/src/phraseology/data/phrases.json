@@ -1,0 +1,220 @@
+{
+  "phrases": [
+    {
+      "set": "core",
+      "id": 1,
+      "phrase": "Godzilla",
+      "clue": "Oh, no, there goes Tokyo.",
+      "tags": "Movies, Sci-Fi, Characters",
+      "franchise": "Godzilla",
+      "rating": "PG"
+    },
+    {
+      "set": "core",
+      "id": 2,
+      "phrase": "Scott Pilgrim vs. The World",
+      "clue": "Guy meets girl, guy fights league of evil exes.",
+      "tags": "Movies, Comics",
+      "franchise": "",
+      "rating": "PG"
+    },
+    {
+      "set": "core",
+      "id": 3,
+      "phrase": "Fox Mulder",
+      "clue": "The truth is out there for this special agent of the FBI.",
+      "tags": "TV, Sci-Fi, Characters",
+      "franchise": "X-Files",
+      "rating": "PG"
+    },
+    {
+      "set": "core",
+      "id": 4,
+      "phrase": "Tina Belcher",
+      "clue": "This bespectacled teen loves boys, butts, and zombies.",
+      "tags": "TV, Animation, Characters",
+      "franchise": "Bob's Burgers",
+      "rating": "PG"
+    },
+    {
+      "set": "core",
+      "id": 5,
+      "phrase": "The Oval Office",
+      "clue": "Hail to the chief in this iconically shaped workspace.",
+      "tags": "Places, Politics, USA",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 6,
+      "phrase": "Michael Myers",
+      "clue": "Mask-wearing psychopath from the Halloween movies.",
+      "tags": "Movies, Horror, Characters, Villains",
+      "franchise": "Halloween",
+      "rating": "PG-13"
+    },
+    {
+      "set": "core",
+      "id": 7,
+      "phrase": "Jean-Luc Picard",
+      "clue": "Captain of the USS Enterprise as played by the legendary Patrick Stewart.",
+      "tags": "TV, Characters, Sci-Fi, Star Trek",
+      "franchise": "Star Trek",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 8,
+      "phrase": "Baby Shark",
+      "clue": "This children's song will have you \"doo-doo do doo\"ing for days.",
+      "tags": "Music, Kids",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 9,
+      "phrase": "Cruella DeVil",
+      "clue": "If she doesn't scare you, no evil thing will.",
+      "tags": "Movies, Disney, Animation, Villains, Characters",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 10,
+      "phrase": "Arnold Schwarzenegger",
+      "clue": "Iconic Austrian actor. He'll be back.",
+      "tags": "Movies, Actors, People",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 11,
+      "phrase": "Ruth Bader Ginsburg",
+      "clue": "Supreme Court Justice with a \"notorious\" nickname.",
+      "tags": "People, Politics, USA",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 12,
+      "phrase": "30-50 Feral Hogs",
+      "clue": "A porcine menace in your backyard and potential justification for assault rifles?",
+      "tags": "Memes, Animals",
+      "franchise": "",
+      "rating": "PG"
+    },
+    {
+      "set": "core",
+      "id": 13,
+      "phrase": "JavaScript",
+      "clue": "Programming language available in web browsers (and everywhere else!).",
+      "tags": "Tech, Science",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 14,
+      "phrase": "supernova",
+      "clue": "Scientific term for a star that has begun to explode.",
+      "tags": "Science, Space",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 15,
+      "phrase": "Big Bird",
+      "clue": "You might find this large yellow avian on 123 Stoop.",
+      "tags": "Kids, Characters",
+      "franchise": "Sesame Street",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 16,
+      "phrase": "Mega Man",
+      "clue": "Azure video game hero that can absorb powers from defeated bosses.",
+      "tags": "Video Games, Characters",
+      "franchise": "Mega Man",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 17,
+      "phrase": "Bernard Lowe",
+      "clue": "Westworld's head of behavior. \"Doesn't look like anything to me.",
+      "tags": "TV, Sci-Fi, Characters",
+      "franchise": "Westworld",
+      "rating": "PG-13"
+    },
+    {
+      "set": "core",
+      "id": 18,
+      "phrase": "Bowser Jr.",
+      "clue": "Offspring of King Koopa from the Mario games.",
+      "tags": "Video Games, Characters",
+      "franchise": "Mario",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 19,
+      "phrase": "planking",
+      "clue": "Meme sensation of 2011 involving lying very still in sometimes dangerous places.",
+      "tags": "Memes, Actions",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 20,
+      "phrase": "learnings",
+      "clue": "Like lessons, but more business-y.",
+      "tags": "Language, Tech",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 21,
+      "phrase": "Sputnik",
+      "clue": "First artificial satellite, launched by the USSR.",
+      "tags": "Science, Space, History",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 22,
+      "phrase": "lycanthropy",
+      "clue": "The fictional disease that turns people into werewolves.",
+      "tags": "Horror, Language",
+      "franchise": "",
+      "rating": "PG"
+    },
+    {
+      "set": "core",
+      "id": 23,
+      "phrase": "flossing",
+      "clue": "The \"Backpack Kid\" dance immortalized in video game Fortnite.",
+      "tags": "Memes, Dance",
+      "franchise": "",
+      "rating": "G"
+    },
+    {
+      "set": "core",
+      "id": 24,
+      "phrase": "Vitruvian Man",
+      "clue": "Famouns Leonardo Da Vinci sketch of a man inscribed in a circle.",
+      "tags": "Art",
+      "franchise": "",
+      "rating": "G"
+    }
+  ]
+}

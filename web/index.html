@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partay Games</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/index.postcss" />
+  </head>
+  <body>
+    <section id="zero" class="p-3 flex flex-col h-full">
+      <h1 class="text-center text-2xl bold">Play Phraseology</h1>
+
+      <form id="join">
+        <div class="mt-2">
+          <label class="block" for="join-name">Your Name:</label>
+          <input id="join-name" type="text" name="name" class="w-full" />
+        </div>
+        <div class="mt-2 flex-1">
+          <label class="block" for="join-room">Room:</label>
+          <input
+            id="join-room"
+            type="text"
+            name="room"
+            maxlength="4"
+            class="uppercase w-full"
+          />
+        </div>
+
+        <button class="btn w-full mt-4" type="submit">Join Game</button>
+      </form>
+
+      <button class="btn w-full mt-2" id="start">Start Game</button>
+    </section>
+    <phrase-game></phrase-game>
+    <script src="src/index.ts"></script>
+  </body>
+</html>
