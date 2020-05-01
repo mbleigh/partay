@@ -2,219 +2,443 @@
   "phrases": [
     {
       "set": "core",
-      "id": 1,
+      "id": "1",
       "phrase": "Godzilla",
-      "clue": "Oh, no, there goes Tokyo.",
+      "clue": "Oh, no, there goes Tokyo. This \"king of monsters\" is the result of nuclear testing.",
       "tags": "Movies, Sci-Fi, Characters",
       "franchise": "Godzilla",
-      "rating": "PG"
+      "rating": "PG",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 2,
+      "id": "2",
       "phrase": "Scott Pilgrim vs. The World",
       "clue": "Guy meets girl, guy fights league of evil exes.",
       "tags": "Movies, Comics",
-      "franchise": "",
-      "rating": "PG"
+      "franchise": null,
+      "rating": "PG",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 3,
+      "id": "3",
       "phrase": "Fox Mulder",
       "clue": "The truth is out there for this special agent of the FBI.",
       "tags": "TV, Sci-Fi, Characters",
       "franchise": "X-Files",
-      "rating": "PG"
+      "rating": "PG",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 4,
+      "id": "4",
       "phrase": "Tina Belcher",
       "clue": "This bespectacled teen loves boys, butts, and zombies.",
       "tags": "TV, Animation, Characters",
       "franchise": "Bob's Burgers",
-      "rating": "PG"
+      "rating": "PG",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 5,
+      "id": "5",
       "phrase": "The Oval Office",
       "clue": "Hail to the chief in this iconically shaped workspace.",
       "tags": "Places, Politics, USA",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 6,
+      "id": "6",
       "phrase": "Michael Myers",
       "clue": "Mask-wearing psychopath from the Halloween movies.",
       "tags": "Movies, Horror, Characters, Villains",
       "franchise": "Halloween",
-      "rating": "PG-13"
+      "rating": "PG-13",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 7,
+      "id": "7",
       "phrase": "Jean-Luc Picard",
       "clue": "Captain of the USS Enterprise as played by the legendary Patrick Stewart.",
       "tags": "TV, Characters, Sci-Fi, Star Trek",
       "franchise": "Star Trek",
-      "rating": "G"
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 8,
+      "id": "8",
       "phrase": "Baby Shark",
       "clue": "This children's song will have you \"doo-doo do doo\"ing for days.",
       "tags": "Music, Kids",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 9,
+      "id": "9",
       "phrase": "Cruella DeVil",
       "clue": "If she doesn't scare you, no evil thing will.",
       "tags": "Movies, Disney, Animation, Villains, Characters",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 10,
+      "id": "10",
       "phrase": "Arnold Schwarzenegger",
       "clue": "Iconic Austrian actor. He'll be back.",
       "tags": "Movies, Actors, People",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 11,
+      "id": "11",
       "phrase": "Ruth Bader Ginsburg",
       "clue": "Supreme Court Justice with a \"notorious\" nickname.",
       "tags": "People, Politics, USA",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 12,
+      "id": "12",
       "phrase": "30-50 Feral Hogs",
       "clue": "A porcine menace in your backyard and potential justification for assault rifles?",
       "tags": "Memes, Animals",
-      "franchise": "",
-      "rating": "PG"
+      "franchise": null,
+      "rating": "PG",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 13,
+      "id": "13",
       "phrase": "JavaScript",
       "clue": "Programming language available in web browsers (and everywhere else!).",
       "tags": "Tech, Science",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 14,
+      "id": "14",
       "phrase": "supernova",
       "clue": "Scientific term for a star that has begun to explode.",
       "tags": "Science, Space",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 15,
+      "id": "15",
       "phrase": "Big Bird",
-      "clue": "You might find this large yellow avian on 123 Stoop.",
+      "clue": "You might find this large yellow avian on 123 Stoop playing with monsters.",
       "tags": "Kids, Characters",
       "franchise": "Sesame Street",
-      "rating": "G"
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 16,
+      "id": "16",
       "phrase": "Mega Man",
       "clue": "Azure video game hero that can absorb powers from defeated bosses.",
       "tags": "Video Games, Characters",
       "franchise": "Mega Man",
-      "rating": "G"
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 17,
+      "id": "17",
       "phrase": "Bernard Lowe",
-      "clue": "Westworld's head of behavior. \"Doesn't look like anything to me.",
+      "clue": "Westworld's head of behavior. \"Doesn't look like anything to me.\"",
       "tags": "TV, Sci-Fi, Characters",
       "franchise": "Westworld",
-      "rating": "PG-13"
+      "rating": "PG-13",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 18,
+      "id": "18",
       "phrase": "Bowser Jr.",
       "clue": "Offspring of King Koopa from the Mario games.",
       "tags": "Video Games, Characters",
-      "franchise": "Mario",
-      "rating": "G"
+      "franchise": "Super Mario",
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 19,
+      "id": "19",
       "phrase": "planking",
       "clue": "Meme sensation of 2011 involving lying very still in sometimes dangerous places.",
       "tags": "Memes, Actions",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 20,
+      "id": "20",
       "phrase": "learnings",
       "clue": "Like lessons, but more business-y.",
       "tags": "Language, Tech",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 21,
+      "id": "21",
       "phrase": "Sputnik",
       "clue": "First artificial satellite, launched by the USSR.",
       "tags": "Science, Space, History",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 22,
+      "id": "22",
       "phrase": "lycanthropy",
       "clue": "The fictional disease that turns people into werewolves.",
       "tags": "Horror, Language",
-      "franchise": "",
-      "rating": "PG"
+      "franchise": null,
+      "rating": "PG",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 23,
+      "id": "23",
       "phrase": "flossing",
       "clue": "The \"Backpack Kid\" dance immortalized in video game Fortnite.",
       "tags": "Memes, Dance",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
     },
     {
       "set": "core",
-      "id": 24,
+      "id": "24",
       "phrase": "Vitruvian Man",
-      "clue": "Famouns Leonardo Da Vinci sketch of a man inscribed in a circle.",
+      "clue": "Famous Leonardo Da Vinci sketch of a man inscribed in a circle.",
       "tags": "Art",
-      "franchise": "",
-      "rating": "G"
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "25",
+      "phrase": "Rickroll",
+      "clue": "A colloquial term for tricking someone into opening the music video for 80s song 'Never Gonna Give You Up'.",
+      "tags": "Memes, Music",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "26",
+      "phrase": "Thanos",
+      "clue": "This Marvel villain accomplished his dastardly goals in a snap.",
+      "tags": "Movies, Comics",
+      "franchise": "Marvel",
+      "rating": "PG",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "27",
+      "phrase": "sasparilla",
+      "clue": "This root beer like beverage has an old west vibe.",
+      "tags": "Food",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "28",
+      "phrase": "Excalibur",
+      "clue": "This blade was given to King Arthur by the Lady in the Lake.",
+      "tags": "Fantasy, Movies, TV, Books",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "29",
+      "phrase": "Joe Exotic",
+      "clue": "This Florida private zoo owner was the subject of the Netflix docuseries \"Tiger King.\"",
+      "tags": "TV, People",
+      "franchise": null,
+      "rating": "PG-13",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "30",
+      "phrase": "Stay Puft Marshmallow Man",
+      "clue": "It was the least threatening thing Ray Stantz could think of, but hard to bust when it's 100 ft. tall!",
+      "tags": "Movies, Sci-Fi, Horror, Comedy",
+      "franchise": "Ghostbusters",
+      "rating": "PG",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "31",
+      "phrase": "Hodor",
+      "clue": "Large, lovable, and only capable of saying one word. This Game of Thrones character is a helper to the Stark family.",
+      "tags": "TV, Fantasy, Characters",
+      "franchise": "Game of Thrones",
+      "rating": "PG-13",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "32",
+      "phrase": "Hamburglar",
+      "clue": "This fast food mascot will steal your Mickey D's if you aren't careful. \"Robble robble!\"",
+      "tags": "Characters, Mascots, Companies",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "33",
+      "phrase": "William Howard Taft",
+      "clue": "The only United States president to also serve as a supreme court justice; unfortunately, more often known for his girth than his accomplishments.",
+      "tags": "History, People, Politics, USA",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "34",
+      "phrase": "All Your Base Are Belong To Us",
+      "clue": "This song and Flash video was a viral meme before viral memes were a thing. \"For great justice. Take off every Zig!\"",
+      "tags": "Memes, Video Games",
+      "franchise": null,
+      "rating": "PG",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "35",
+      "phrase": "Frida Kahlo",
+      "clue": "Mexican painter known for her many portraits, self-portraits, and works inspired by the nature and artifacts of Mexico. Also known for having a single eyebrow.",
+      "tags": "Art",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "36",
+      "phrase": "sad trombone",
+      "clue": "A brass instrument with a slide makes this iconic \"fail\" sound.",
+      "tags": "Music, Memes",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "37",
+      "phrase": "Tom Nook",
+      "clue": "This raccoon always finds ways to put you further into debt in the video game Animal Crossing.",
+      "tags": "Video Games, Characters",
+      "franchise": "Animal Crossing",
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "38",
+      "phrase": "DeLorean",
+      "clue": "An iconic 80's car immortalized as Doc Brown's time machine in \"Back to the Future.\"",
+      "tags": "Movies, Sci-Fi, Cars, 1980s",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "39",
+      "phrase": "But wait, there's more!",
+      "clue": "Infomercials that really want to land the pitch entice buyers with a little something extra...",
+      "tags": "Catchphrases, TV, Companies",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "40",
+      "phrase": "Frosted Tips",
+      "clue": "A hairstyle consisting of bleaching only the ends of hair, popular with boy bands in the 90s.",
+      "tags": "1990s, Style",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "41",
+      "phrase": "Blue Man Group",
+      "clue": "Performance art group known for percussion and a distinct skin tone.",
+      "tags": "Music, Art",
+      "franchise": null,
+      "rating": "G",
+      "attribution": null
+    },
+    {
+      "set": "core",
+      "id": "42",
+      "phrase": "Tulips",
+      "clue": "These flowers used to be more expensive than gold in the golden age of The Netherlands.",
+      "tags": "History",
+      "franchise": null,
+      "rating": "G",
+      "attribution": "puf"
+    },
+    {
+      "set": "core",
+      "id": "43",
+      "phrase": "Tubthumping",
+      "clue": "Dance Rock track from British band Chumbawamba. Also known as \"I Get Knocked Down\". \"Tubthumping\" was placed at number 12 in Rolling Stone's list of the 20 Most Annoying Songs",
+      "tags": "Music",
+      "franchise": null,
+      "rating": "PG",
+      "attribution": "Uncle Robert"
+    },
+    {
+      "set": "core",
+      "id": "44",
+      "phrase": "Pull My Finger",
+      "clue": "Joke Uncles and Grandpas play on unsuspecting children. Pulling their finger makes them fart",
+      "tags": null,
+      "franchise": null,
+      "rating": "G",
+      "attribution": "Uncle Robert"
     }
   ]
 }
