@@ -1,21 +1,32 @@
 import { PartayBase } from "../base";
 import { html } from "lit-html";
 import { property } from "lit-element";
-import { State, PhraseGameState } from "../../types";
+import { State, PhraseGameState, GameError } from "../../types";
 
 import "./phrase-lobby";
 import "./phrase-prep";
 import "./phrase-play";
 import "./phrase-end";
 import { leaveRoom } from "../../actions/common";
+import page from "page";
+import { setState } from "../../state";
 
 class PhraseGame extends PartayBase {
   @property({ type: String }) name?: string;
   @property({ type: String }) state?: PhraseGameState;
   @property({ type: String }) room?: string;
   @property({ type: String }) team?: string;
+  @property({ type: Object }) error?: GameError | null = null;
+
   reduce(state: State): void {
+    this.error = state.error;
+
     if (!state.game) {
+      return;
+    }
+
+    if (!state.game.players?.[state.uid!]) {
+      page("/");
       return;
     }
 
@@ -44,6 +55,14 @@ class PhraseGame extends PartayBase {
 
   render() {
     return html`
+      ${this.error
+        ? html`<p
+            class="bg-red-600 p-2 text-lg"
+            @click=${() => setState({ error: undefined })}
+          >
+            <b>Error:</b> ${this.error.message}
+          </p>`
+        : ""}
       <header
         class="flex flex-row bg-gray-900 py-1 px-2 text-l fill-team-${this
           .team || "none"}"

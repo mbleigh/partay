@@ -76,8 +76,12 @@ export interface PhraseGame {
   } | null;
 }
 
+export interface GameError {
+  message: string;
+}
+
 export interface State {
-  error?: { message: string };
+  error?: GameError;
   uid?: string;
   user?: {
     name?: string;

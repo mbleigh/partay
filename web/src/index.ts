@@ -4,17 +4,27 @@ import "./routes";
 import "./listeners";
 import { createRoom, joinRoom } from "./actions/common";
 import { formValue } from "./helpers/html";
+import { getState } from "./state";
 
-document.getElementById("start")!.addEventListener("click", (e) => {
+document.getElementById("start")!.addEventListener("click", async (e) => {
   e.preventDefault();
-  return createRoom("phraseology", formValue("#join-name"));
+  await createRoom("phraseology", formValue("#join-name"));
+  const { error } = getState();
+  if (error) {
+    document.getElementById("top-error")!.innerText = error!.message;
+  }
 });
 
-document.getElementById("join")!.addEventListener("submit", (e) => {
+document.getElementById("join")!.addEventListener("submit", async (e) => {
   e.preventDefault();
-  return joinRoom(
+  await joinRoom(
     "phraseology",
     formValue("#join-room"),
     formValue("#join-name")
   );
+
+  const { error } = getState();
+  if (error) {
+    document.getElementById("top-error")!.innerText = error!.message;
+  }
 });

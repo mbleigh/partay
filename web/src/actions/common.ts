@@ -15,6 +15,11 @@ function generateCode(size = 4): string {
 }
 
 export async function createRoom(game: GameType, name: string): Promise<void> {
+  if (!name) {
+    return setState({
+      error: { message: "You must provide a name to start a game." },
+    });
+  }
   const code = generateCode();
   await roomRef(code, game).set(newGame(getState().uid!, name));
   page(`/${code}`);
@@ -25,6 +30,16 @@ export async function joinRoom(
   code: string,
   name: string
 ): Promise<void> {
+  if (!code) {
+    return setState({
+      error: { message: "You must provide a room code to join a game." },
+    });
+  } else if (!name) {
+    return setState({
+      error: { message: "You must provide a name to join a room." },
+    });
+  }
+
   code = code.toUpperCase();
   const ref = roomRef(code, game);
   const snap = await ref.once("value");
@@ -39,6 +54,12 @@ export async function joinRoom(
   if (gameData.players?.[uid]) {
     page(`/${code}`);
     return;
+  }
+
+  if (gameData.state !== "lobby") {
+    return setState({
+      error: { message: `Game ${code} has already started, you cannot join.` },
+    });
   }
 
   let playerCount = 0,
