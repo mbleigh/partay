@@ -13,10 +13,12 @@ import {
   turnGuessed,
   turnSkip,
   nextTurn,
+  startNextRound,
 } from "../../actions/phraseology";
 import { expandPhrase } from "../../phraseology/deck";
 
 import "./phrase-countdown";
+import { TURN_DURATION } from "../../helpers/phraseology";
 
 const RULES_FOR_TYPE = {
   anything:
@@ -29,6 +31,7 @@ const RULES_FOR_TYPE = {
 
 class PhrasePlay extends PartayBase {
   @property({ type: Boolean }) isCluegiver: boolean = false;
+  @property({ type: Boolean }) isCaptain: boolean = false;
   @property({ type: Object }) currentTurn: PhraseTurn | null = null;
   @property({ type: Object }) currentRound: PhraseRound | null = null;
   @property({ type: String }) cluegiverName: string = "";
@@ -36,14 +39,17 @@ class PhrasePlay extends PartayBase {
   @property({ type: Object }) guessingTeam: PhraseTeam = "red";
   @property({ type: Object }) playerTeam: PhraseTeam = "red";
   @property({ type: Boolean }) turnOver: boolean = false;
+  @property({ type: Number }) roundNumber: number = 0;
 
   timeout: NodeJS.Timeout | null = null;
 
   reduce(state: State) {
+    this.roundNumber = state.game!.round!;
     this.currentRound = currentRound();
     this.currentTurn = currentTurn();
     this.playerTeam = state.game!.players[state.uid!].team;
     this.isCluegiver = state.uid! === this.currentTurn!.player;
+    this.isCaptain = state.uid! === state.game?.captain;
     this.guessingTeam = state.game!.players[this.currentTurn!.player].team;
     this.cluegiverName = state.game!.players[this.currentTurn!.player].name;
     this.currentPhrase = expandPhrase(
@@ -51,12 +57,12 @@ class PhrasePlay extends PartayBase {
     );
     console.log(this.currentTurn);
     if (this.currentTurn?.start_time) {
-      this.turnOver = Date.now() - this.currentTurn.start_time > 60000;
+      this.turnOver = Date.now() - this.currentTurn.start_time > TURN_DURATION;
       if (!this.turnOver && !this.timeout) {
-        this.timeout = setTimeout(
-          () => (this.turnOver = true),
-          this.currentTurn.start_time + 60000 - Date.now()
-        );
+        this.timeout = setTimeout(() => {
+          this.turnOver = true;
+          this.timeout = null;
+        }, this.currentTurn.start_time + TURN_DURATION - Date.now());
       }
     }
 
@@ -64,9 +70,12 @@ class PhrasePlay extends PartayBase {
   }
 
   render() {
-    console.log(this.currentTurn, this.isCluegiver);
+    if (this.currentRound?.end_time) {
+      return this.renderRoundEnd();
+    }
+
     if (this.currentTurn?.start_time) {
-      return this.turnOver ? this.renderEnd() : this.renderPlay();
+      return this.turnOver ? this.renderTurnEnd() : this.renderPlay();
     }
     return this.renderPrep();
   }
@@ -86,7 +95,7 @@ class PhrasePlay extends PartayBase {
     return html`
       <phrase-countdown class="text-center text-5xl block my-3" start=${
         this.currentTurn?.start_time
-      } duration="60"></phrase-countdown></h3>
+      }></phrase-countdown></h3>
       ${
         this.isCluegiver && this.currentPhrase
           ? html`<div class="bg-white m-3 rounded px-3 py-2 max-w-sm text-center mx-auto h-28">
@@ -103,7 +112,7 @@ class PhrasePlay extends PartayBase {
     `;
   }
 
-  renderEnd() {
+  renderTurnEnd() {
     return html`
       <h3 class="my-4 text-center font-3xl font-bold">Time's Up!</h3>
       <p class="px-3 font-xl text-center mb-5">
@@ -181,6 +190,31 @@ class PhrasePlay extends PartayBase {
           </button>`
         : ""}
     `;
+  }
+
+  renderRoundEnd() {
+    return html`
+      <h3 class="text-center font-bold my-3 text-3xl">Round Over!</h3>
+      <div class="text-center p-4 rounded fill-team-red mt-4 mb-2">Red Score: <b>${
+        this.currentRound?.red_score
+      }</div>
+      <div class="text-center p-4 rounded fill-team-blue mb-6">Blue Score: <b>${
+        this.currentRound?.blue_score
+      }</div>
+      ${this.renderRoundEndAction()}
+    `;
+  }
+
+  renderRoundEndAction() {
+    if (this.isCaptain) {
+      return html`<button
+        class="btn block w-full"
+        @click=${() => startNextRound()}
+      >
+        ${this.roundNumber === 3 ? "See Final Scores" : "Start Next Round"}
+      </button>`;
+    }
+    return html`<h3 class="text-center p-3">Waiting for captain...</h3>`;
   }
 }
 

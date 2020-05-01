@@ -6,6 +6,7 @@ import { State, PhraseGameState } from "../../types";
 import "./phrase-lobby";
 import "./phrase-prep";
 import "./phrase-play";
+import "./phrase-end";
 import { leaveRoom } from "../../actions/common";
 
 class PhraseGame extends PartayBase {
@@ -34,8 +35,10 @@ class PhraseGame extends PartayBase {
         return html`<phrase-prep class="flex-1"></phrase-prep>`;
       case "play":
         return html`<phrase-play class="flex-1"></phrase-play>`;
+      case "end":
+        return html`<phrase-end class="flex-1"></phrase-end>`;
       default:
-        return html`<b>NOT IMPLEMENTED</b>`;
+        return html`<p class="text-center py-8">Loading&hellip;</p>`;
     }
   }
 

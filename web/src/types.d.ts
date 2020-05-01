@@ -18,6 +18,9 @@ export interface PhraseRound {
   turns?: {
     [turnId: string]: PhraseTurn;
   };
+  red_score?: number;
+  blue_score?: number;
+  end_time?: number;
 }
 
 export interface Phrase {
@@ -48,6 +51,8 @@ export interface PhraseGame {
   create_time: number;
   start_time?: number | null;
   end_time?: number | null;
+  red_score?: number;
+  blue_score?: number;
   captain: string;
   round?: number | null;
   turn?: string | null;

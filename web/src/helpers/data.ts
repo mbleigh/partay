@@ -1,4 +1,10 @@
-import { Keyable, GameType, PhraseTurn, PhraseRound } from "../types";
+import {
+  Keyable,
+  GameType,
+  PhraseTurn,
+  PhraseRound,
+  PhraseTeam,
+} from "../types";
 import { db } from "../firebase";
 import { getState } from "../state";
 
@@ -59,4 +65,23 @@ export function currentRound(): PhraseRound | null {
 export function currentRoundPath(): string {
   const { game } = getState();
   return `rounds/round${game!.round}`;
+}
+
+export function teamOfPlayer(id: string): PhraseTeam {
+  const { game } = getState();
+  return game!.players[id].team;
+}
+
+export function roundScore(roundNumber: number, team: PhraseTeam): number {
+  const { game } = getState();
+  const round: PhraseRound = game!.rounds![`round${roundNumber}`];
+
+  let score = 0;
+  for (const tid in round.turns) {
+    if (teamOfPlayer(round.turns[tid].player) === team) {
+      score += (round.turns[tid].guessed || []).length;
+    }
+  }
+
+  return score;
 }

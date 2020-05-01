@@ -1,8 +1,9 @@
 import { LitElement, property, html } from "lit-element";
+import { TURN_DURATION } from "../../helpers/phraseology";
 
 class PhraseCountdown extends LitElement {
   @property({ type: Number }) start: number = 0;
-  @property({ type: Number }) duration: number = 60;
+  @property({ type: Number }) duration: number = TURN_DURATION;
 
   interval: NodeJS.Timeout | null = null;
 
@@ -17,7 +18,7 @@ class PhraseCountdown extends LitElement {
   }
 
   countdown(): number {
-    const end = this.start + this.duration * 1000;
+    const end = this.start + this.duration;
     return Math.max(Math.floor((end - Date.now()) / 1000), 0);
   }
 

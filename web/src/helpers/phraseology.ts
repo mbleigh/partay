@@ -3,6 +3,8 @@ import { SERVER_TIMESTAMP } from "../firebase";
 import { asArray } from "./data";
 import { getState } from "../state";
 
+export const TURN_DURATION = 5000;
+
 export function newGame(captain: string, name: string): PhraseGame {
   return {
     create_time: SERVER_TIMESTAMP,

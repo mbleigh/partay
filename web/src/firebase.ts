@@ -15,9 +15,9 @@ firebase.initializeApp({
 });
 
 const db = firebase.database();
-const SERVER_TIMESTAMP: number = firebase.database.ServerValue
-  .TIMESTAMP as number;
+const SERVER_TIMESTAMP: number = (firebase.database.ServerValue
+  .TIMESTAMP as unknown) as number;
 const auth = firebase.auth();
 const analytics = firebase.analytics();
 
-export { analytics, auth, db, SERVER_TIMESTAMP };
+export { analytics, auth, db, SERVER_TIMESTAMP, increment };
