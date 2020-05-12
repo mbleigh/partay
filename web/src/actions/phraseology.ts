@@ -153,14 +153,12 @@ export async function nextTurn(): Promise<void> {
       cursor: 0,
       player,
     });
-  await roomRef().update(
-    Object.assign({
-      turn: ref.key,
-      "turn_order/last_team": team,
-      [`turn_order/${team}_cursor`]:
-        (teamCursor + 1) % turn_order![team].length,
-    })
-  );
+  await roomRef().update({
+    [currentRoundPath() + "/emoji"]: null,
+    turn: ref.key,
+    "turn_order/last_team": team,
+    [`turn_order/${team}_cursor`]: (teamCursor + 1) % turn_order![team].length,
+  });
 }
 
 /**
@@ -198,6 +196,7 @@ export async function turnGuessed(): Promise<void> {
     [currentTurnPath() + "/deck"]: deck,
     [currentTurnPath() + "/guessed"]: guessed,
     [currentTurnPath() + "/cursor"]: cursor,
+    [currentRoundPath() + "/emoji"]: null,
   };
 
   // this round is over!
@@ -235,6 +234,7 @@ export async function turnSkip(): Promise<void> {
   await roomRef().update({
     [currentTurnPath() + "/skipped"]: skipped,
     [currentTurnPath() + "/cursor"]: cursor,
+    [currentRoundPath() + "/emoji"]: null,
   });
 }
 

@@ -61,9 +61,13 @@ class PhrasePlay extends PartayBase {
       this.turnOver = Date.now() - this.currentTurn.start_time > TURN_DURATION;
       if (!this.turnOver && !this.timeout) {
         this.timeout = setTimeout(() => {
+          console.log(
+            "turn over timer fired",
+            Date.now() - this.currentTurn!.start_time!
+          );
           this.turnOver = true;
           this.timeout = null;
-        }, this.currentTurn.start_time + TURN_DURATION - Date.now());
+        }, TURN_DURATION - (Date.now() - this.currentTurn.start_time));
       }
     }
 
@@ -135,7 +139,7 @@ class PhrasePlay extends PartayBase {
   renderCluegiver() {
     return html`<div class="mt-5 p-3">
       ${this.currentRound?.type === "emoji"
-        ? html`<phrase-moji></phrase-moji>`
+        ? html`<div class="mb-3"><phrase-moji></phrase-moji></div>`
         : ""}
       <button
         @click=${() => {
