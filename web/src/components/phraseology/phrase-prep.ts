@@ -28,7 +28,7 @@ class PhrasePrep extends PartayBase {
     return html`
       <div
         phraseid=${p.id}
-        class="h-24 bg-white rounded text-black my-1 mx-auto text-center py-3 px-5 border-2 border-pink-500"
+        class="bg-white rounded text-black my-1 mx-auto text-center py-3 px-5 border-2 border-pink-500"
         ?discarded=${this.discards.includes(p.id)}
         @click=${() => toggleDiscard(p.id)}
       >

@@ -1,4 +1,4 @@
-import { db, auth } from "./firebase";
+import { db, auth, analytics } from "./firebase";
 import { setState, subscribe } from "./state";
 
 auth.onAuthStateChanged((user) => {
@@ -6,6 +6,7 @@ auth.onAuthStateChanged((user) => {
     return auth.signInAnonymously();
   }
 
+  analytics.setUserId(user.uid);
   setState({ uid: user.uid });
 });
 

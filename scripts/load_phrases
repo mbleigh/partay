@@ -3,4 +3,11 @@
 require 'csv'
 require 'json'
 
-puts JSON.pretty_generate({phrases: CSV.new(File.read('phrases.csv'), headers: true).map{|r| r.to_h}})
+puts JSON.pretty_generate({
+  phrases: CSV.new(File.read('phrases.csv'), headers: true).map{|r|
+    h = r.to_h
+    h["id"] = h["id"].to_i
+    h["tags"] = (h["tags"] || "").split(/, ?/)
+    h
+  }
+})

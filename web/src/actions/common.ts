@@ -1,5 +1,5 @@
 import { GameType, PhraseGame } from "../types";
-import { SERVER_TIMESTAMP } from "../firebase";
+import { SERVER_TIMESTAMP, logEvent } from "../firebase";
 import { getState, setState } from "../state";
 import { newGame } from "../helpers/phraseology";
 import page from "page";
@@ -22,6 +22,7 @@ export async function createRoom(game: GameType, name: string): Promise<void> {
   }
   const code = generateCode();
   await roomRef(code, game).set(newGame(getState().uid!, name));
+  logEvent("create_room", { game });
   page(`/${code}`);
 }
 
@@ -89,6 +90,7 @@ export async function joinRoom(
     team = Math.random() > 0.5 ? "red" : "blue";
   }
 
+  logEvent("join_room", { game });
   await ref.update({
     [`players/${uid}`]: { name, team, join_time: SERVER_TIMESTAMP },
   });

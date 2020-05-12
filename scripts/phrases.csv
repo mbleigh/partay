@@ -1,45 +1,64 @@
-set,id,phrase,clue,tags,franchise,rating,attribution
-core,1,Godzilla,"Oh, no, there goes Tokyo. This ""king of monsters"" is the result of nuclear testing.","Movies, Sci-Fi, Characters",Godzilla,PG,
-core,2,Scott Pilgrim vs. The World,"Guy meets girl, guy fights league of evil exes.","Movies, Comics",,PG,
-core,3,Fox Mulder,The truth is out there for this special agent of the FBI.,"TV, Sci-Fi, Characters",X-Files,PG,
-core,4,Tina Belcher,"This bespectacled teen loves boys, butts, and zombies.","TV, Animation, Characters",Bob's Burgers,PG,
-core,5,The Oval Office,Hail to the chief in this iconically shaped workspace.,"Places, Politics, USA",,G,
-core,6,Michael Myers,Mask-wearing psychopath from the Halloween movies.,"Movies, Horror, Characters, Villains",Halloween,PG-13,
-core,7,Jean-Luc Picard,Captain of the USS Enterprise as played by the legendary Patrick Stewart.,"TV, Characters, Sci-Fi, Star Trek",Star Trek,G,
-core,8,Baby Shark,"This children's song will have you ""doo-doo do doo""ing for days.","Music, Kids",,G,
-core,9,Cruella DeVil,"If she doesn't scare you, no evil thing will.","Movies, Disney, Animation, Villains, Characters",,G,
-core,10,Arnold Schwarzenegger,Iconic Austrian actor. He'll be back.,"Movies, Actors, People",,G,
-core,11,Ruth Bader Ginsburg,"Supreme Court Justice with a ""notorious"" nickname.","People, Politics, USA",,G,
-core,12,30-50 Feral Hogs,A porcine menace in your backyard and potential justification for assault rifles?,"Memes, Animals",,PG,
-core,13,JavaScript,Programming language available in web browsers (and everywhere else!).,"Tech, Science",,G,
-core,14,supernova,Scientific term for a star that has begun to explode.,"Science, Space",,G,
-core,15,Big Bird,You might find this large yellow avian on 123 Stoop playing with monsters.,"Kids, Characters",Sesame Street,G,
-core,16,Mega Man,Azure video game hero that can absorb powers from defeated bosses.,"Video Games, Characters",Mega Man,G,
-core,17,Bernard Lowe,"Westworld's head of behavior. ""Doesn't look like anything to me.""","TV, Sci-Fi, Characters",Westworld,PG-13,
-core,18,Bowser Jr.,Offspring of King Koopa from the Mario games.,"Video Games, Characters",Super Mario,G,
-core,19,planking,Meme sensation of 2011 involving lying very still in sometimes dangerous places.,"Memes, Actions",,G,
-core,20,learnings,"Like lessons, but more business-y.","Language, Tech",,G,
-core,21,Sputnik,"First artificial satellite, launched by the USSR.","Science, Space, History",,G,
-core,22,lycanthropy,The fictional disease that turns people into werewolves.,"Horror, Language",,PG,
-core,23,flossing,"The ""Backpack Kid"" dance immortalized in video game Fortnite.","Memes, Dance",,G,
-core,24,Vitruvian Man,Famous Leonardo Da Vinci sketch of a man inscribed in a circle.,Art,,G,
-core,25,Rickroll,A colloquial term for tricking someone into opening the music video for 80s song 'Never Gonna Give You Up'.,"Memes, Music",,G,
-core,26,Thanos,This Marvel villain accomplished his dastardly goals in a snap.,"Movies, Comics",Marvel,PG,
-core,27,sasparilla,This root beer like beverage has an old west vibe.,Food,,G,
-core,28,Excalibur,This blade was given to King Arthur by the Lady in the Lake.,"Fantasy, Movies, TV, Books",,G,
-core,29,Joe Exotic,"This Florida private zoo owner was the subject of the Netflix docuseries ""Tiger King.""","TV, People",,PG-13,
-core,30,Stay Puft Marshmallow Man,"It was the least threatening thing Ray Stantz could think of, but hard to bust when it's 100 ft. tall!","Movies, Sci-Fi, Horror, Comedy",Ghostbusters,PG,
-core,31,Hodor,"Large, lovable, and only capable of saying one word. This Game of Thrones character is a helper to the Stark family.","TV, Fantasy, Characters",Game of Thrones,PG-13,
-core,32,Hamburglar,"This fast food mascot will steal your Mickey D's if you aren't careful. ""Robble robble!""","Characters, Mascots, Companies",,G,
-core,33,William Howard Taft,"The only United States president to also serve as a supreme court justice; unfortunately, more often known for his girth than his accomplishments.","History, People, Politics, USA",,G,
-core,34,All Your Base Are Belong To Us,"This song and Flash video was a viral meme before viral memes were a thing. ""For great justice. Take off every Zig!""","Memes, Video Games",,PG,
-core,35,Frida Kahlo,"Mexican painter known for her many portraits, self-portraits, and works inspired by the nature and artifacts of Mexico. Also known for having a single eyebrow.",Art,,G,
-core,36,sad trombone,"A brass instrument with a slide makes this iconic ""fail"" sound.","Music, Memes",,G,
-core,37,Tom Nook,This raccoon always finds ways to put you further into debt in the video game Animal Crossing.,"Video Games, Characters",Animal Crossing,G,
-core,38,DeLorean,"An iconic 80's car immortalized as Doc Brown's time machine in ""Back to the Future.""","Movies, Sci-Fi, Cars, 1980s",,G,
-core,39,"But wait, there's more!",Infomercials that really want to land the pitch entice buyers with a little something extra...,"Catchphrases, TV, Companies",,G,
-core,40,Frosted Tips,"A hairstyle consisting of bleaching only the ends of hair, popular with boy bands in the 90s.","1990s, Style",,G,
-core,41,Blue Man Group,Performance art group known for percussion and a distinct skin tone.,"Music, Art",,G,
-core,42,Tulips,These flowers used to be more expensive than gold in the golden age of The Netherlands.,History,,G,puf
-core,43,Tubthumping,"Dance Rock track from British band Chumbawamba. Also known as ""I Get Knocked Down"". ""Tubthumping"" was placed at number 12 in Rolling Stone's list of the 20 Most Annoying Songs",Music,,PG,Uncle Robert
+set,id,phrase,clue,franchise,tags,rating,attribution
+core,1,Godzilla,"Oh, no, there goes Tokyo. This ""king of monsters"" is the result of nuclear testing.",Godzilla,"Movies, Sci-Fi, Characters",PG,Michael B.
+core,2,Scott Pilgrim vs. The World,"Guy meets girl, guy fights league of evil exes.",,"Movies, Comics",PG,Michael B.
+core,3,Fox Mulder,The truth is out there for this special agent of the FBI.,X-Files,"TV, Sci-Fi, Characters",PG,Michael B.
+core,4,Tina Belcher,"This bespectacled teen loves boys, butts, and zombies.",Bob's Burgers,"TV, Animation, Characters",PG,Michael B.
+core,5,The Oval Office,Hail to the chief in this iconically shaped workspace.,,"Places, Politics, USA",G,Michael B.
+core,6,Michael Myers,Mask-wearing psychopath from the Halloween movies.,Halloween,"Movies, Horror, Characters, Villains",PG-13,Michael B.
+core,7,Jean-Luc Picard,Captain of the USS Enterprise as played by the legendary Patrick Stewart.,Star Trek,"TV, Characters, Sci-Fi, Star Trek",G,Michael B.
+core,8,Baby Shark,"This children's song will have you ""doo-doo do doo""ing for days.",,"Music, Kids",G,Michael B.
+core,9,Cruella DeVil,"If she doesn't scare you, no evil thing will.",,"Movies, Disney, Animation, Villains, Characters",G,Michael B.
+core,10,Arnold Schwarzenegger,Iconic Austrian actor. He'll be back.,,"Movies, Actors, People",G,Michael B.
+core,11,Ruth Bader Ginsburg,"Supreme Court Justice with a ""notorious"" nickname.",,"People, Politics, USA",G,Michael B.
+core,12,30-50 Feral Hogs,A porcine menace in your backyard and potential justification for assault rifles?,,"Memes, Nature",PG,Michael B.
+core,13,JavaScript,Programming language available in web browsers (and everywhere else!).,,"Tech, Science",G,Michael B.
+core,14,supernova,Scientific term for a star that has begun to explode.,,"Science, Space",G,Michael B.
+core,15,Big Bird,You might find this large yellow avian on 123 Stoop playing with monsters.,Sesame Street,"Kids, Characters",G,Michael B.
+core,16,Mega Man,Azure video game hero that can absorb powers from defeated bosses.,Mega Man,"Video Games, Characters",G,Michael B.
+core,17,Bernard Lowe,"Westworld's head of behavior. ""Doesn't look like anything to me.""",Westworld,"TV, Sci-Fi, Characters",PG-13,Michael B.
+core,18,Bowser Jr.,Offspring of King Koopa from the Mario games.,Super Mario,"Video Games, Characters",G,Michael B.
+core,19,planking,Meme sensation of 2011 involving lying very still in sometimes dangerous places.,,"Memes, Actions",G,Michael B.
+core,20,learnings,"Like lessons, but more business-y.",,"Language, Tech",G,Michael B.
+core,21,Sputnik,"First artificial satellite, launched by the USSR.",,"Science, Space, History",G,Michael B.
+core,22,lycanthropy,The fictional disease that turns people into werewolves.,,"Horror, Language",PG,Michael B.
+core,23,flossing,"The ""Backpack Kid"" dance immortalized in video game Fortnite.",,"Memes, Dance",G,Michael B.
+core,24,Vitruvian Man,Famous Leonardo Da Vinci sketch of a man inscribed in a circle.,,Art,G,Michael B.
+core,25,Rickroll,A colloquial term for tricking someone into opening the music video for 80s song 'Never Gonna Give You Up'.,,"Memes, Music",G,Michael B.
+core,26,Thanos,This Marvel villain accomplished his dastardly goals in a snap.,Marvel,"Movies, Comics",PG,Michael B.
+core,27,sasparilla,This root beer like beverage has an old west vibe.,,Food,G,Michael B.
+core,28,Excalibur,This blade was given to King Arthur by the Lady in the Lake.,,"Fantasy, Movies, TV, Books",G,Michael B.
+core,29,Joe Exotic,"This Florida private zoo owner was the subject of the Netflix docuseries ""Tiger King.""",,"TV, People",PG-13,Michael B.
+core,30,Stay Puft Marshmallow Man,"It was the least threatening thing Ray Stantz could think of, but hard to bust when it's 100 ft. tall!",Ghostbusters,"Movies, Sci-Fi, Horror, Comedy",PG,Michael B.
+core,31,Hodor,"Large, lovable, and only capable of saying one word. This Game of Thrones character is a helper to the Stark family.",Game of Thrones,"TV, Fantasy, Characters",PG-13,Michael B.
+core,32,Hamburglar,"This fast food mascot will steal your Mickey D's if you aren't careful. ""Robble robble!""",,"Characters, Mascots, Companies",G,Michael B.
+core,33,William Howard Taft,"The only United States president to also serve as a supreme court justice; unfortunately, more often known for his girth than his accomplishments.",,"History, People, Politics, USA",G,Michael B.
+core,34,All Your Base Are Belong To Us,"This song and Flash video was a viral meme before viral memes were a thing. ""For great justice. Take off every Zig!""",,"Memes, Video Games",PG,Michael B.
+core,35,Frida Kahlo,"Mexican painter known for her many portraits, self-portraits, and works inspired by the nature and artifacts of Mexico. Also known for having a single eyebrow.",,Art,G,Michael B.
+core,36,sad trombone,"A brass instrument with a slide makes this iconic ""fail"" sound.",,"Music, Memes",G,Michael B.
+core,37,Tom Nook,This raccoon always finds ways to put you further into debt in the video game Animal Crossing.,Animal Crossing,"Video Games, Characters",G,Michael B.
+core,38,DeLorean,"An iconic 80's car immortalized as Doc Brown's time machine in ""Back to the Future.""",,"Movies, Sci-Fi, Cars, 1980s",G,Michael B.
+core,39,"But wait, there's more!",Infomercials that really want to land the pitch entice buyers with a little something extra...,,"Catchphrases, TV, Companies",G,Michael B.
+core,40,Frosted Tips,"A hairstyle consisting of bleaching only the ends of hair, popular with boy bands in the 90s.",,"1990s, Style",G,Michael B.
+core,41,Blue Man Group,Performance art group known for percussion and a distinct skin tone.,,"Music, Art",G,Michael B.
+core,42,Tulips,These flowers used to be more expensive than gold in the golden age of The Netherlands.,,History,G,puf
+core,43,Tubthumping,"Dance Rock track from British band Chumbawamba. Also known as ""I Get Knocked Down"". ""Tubthumping"" was placed at number 12 in Rolling Stone's list of the 20 Most Annoying Songs",,Music,PG,Uncle Robert
 core,44,Pull My Finger,Joke Uncles and Grandpas play on unsuspecting children. Pulling their finger makes them fart,,,G,Uncle Robert
+core,45,Tardigrade,"Also called ""water bears"", these near-microscopic animals can survive vacuum!",,Nature,G,Michael B.
+core,46,Duff Beer,A fictional beer favored by Homer Simpson. Can't get enough of that wonderful _____.,,"TV, Food",PG-13,Michael B.
+core,47,do the robot,Swing your arms with elbows bent at right angles and dance like it's 1988.,,"Dance, Culture",G,Michael B.
+core,48,Just Do It,The long-lived slogan of athletic apparel company Nike.,,"Companies, Slogans",G,Michael B.
+core,49,LARPing,"Gather friends and pretend to be characters in a fantastical or historical setting. It's like playing Dungeons and Dragons, only more so.",,,G,Michael B.
+core,50,Cylons,"""Toasters"" pejoratively, these intelligent machines overthrow humanity in Battlestar Galactica.",,,PG,Michael B.
+core,51,My Favorite Murder,"A true crime comedy podcast, featuring two cases an episode told with humor and advice. ",,Podcasts,PG,
+core,52,badonkadonk,A slang term for a particularly full or large butt.,,"Slang, Language",PG-13,
+core,53,E=mc^2,"Albert Einstein's theory of general relativity, in equation form.",,Science,G,Michael B.
+core,54,Skittles,"Small colorful sugary candies with a slogan of ""Taste the Rainbow.""",,"Food, Companies",G,Michael B.
+core,55,pterodactyl,"It's a bird! It's a plane! Oh no, it's a flying dinosaur. Run!",,"Science, Animals",G,Michael B.
+core,56,whoopie cushion,"Prank assistant, put it on someone's chair and giggle at the fart noise.",,Toys,PG,Michael B.
+core,57,plutonium,Radioactive element enriched for nuclear energy and weapon purposes.,,Science,G,Michael B.
+core,58,The Nutcracker Suite,Tchaikovsky's famous ballet often performed at wintertime.,,"Art, Music",G,Michael B.
+core,59,manticore,"A mythical beast typically depicted as having the body of a lion, the face of a man, and the sting of a scorpion.",,Mythology,G,Michael B.
+core,60,Mandalorian,"A group of bounty hunters in the Star Wars universe, of whom Boba Fett is the most famous.",Star Wars,"Sci-Fi, Movies, TV",PG,Michael B.
+core,61,Comic Sans,"An infamous font created by Microsoft, now used mostly ironically.",,"Computers, Fonts",G,Michael B.
+core,62,dodecahedron,"Geometric term for a 20-sided polygon, or another term for a d20.",,Math,G,Michael B.
+core,63,Flamin' Hot Cheetos,Cheesy crunchy junk food with lots of added spice!,,Food,G,Michael B.

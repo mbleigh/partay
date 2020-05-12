@@ -10,9 +10,9 @@ const PHRASE_ID_MAP: { [id: number]: Phrase } = phrases.reduce(
   {}
 );
 
-export function generateDeck(size = 50): number[] {
+export function generateDeck(size = 40): number[] {
   const pool = PHRASE_IDS.slice().sort(() => Math.random() - 0.5);
-  return pool.slice(0, Math.max(size, PHRASE_IDS.length));
+  return pool.slice(0, Math.min(size, PHRASE_IDS.length));
 }
 
 export function expandDeck(ids: number[]): Phrase[] {

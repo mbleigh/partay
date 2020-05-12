@@ -19,5 +19,5 @@ const SERVER_TIMESTAMP: number = (firebase.database.ServerValue
   .TIMESTAMP as unknown) as number;
 const auth = firebase.auth();
 const analytics = firebase.analytics();
-
-export { analytics, auth, db, SERVER_TIMESTAMP, increment };
+const logEvent = analytics.logEvent;
+export { analytics, logEvent, auth, db, SERVER_TIMESTAMP };

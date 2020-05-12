@@ -18,6 +18,7 @@ import {
 import { expandPhrase } from "../../phraseology/deck";
 
 import "./phrase-countdown";
+import "./phrase-moji";
 import { TURN_DURATION } from "../../helpers/phraseology";
 
 const RULES_FOR_TYPE = {
@@ -133,6 +134,9 @@ class PhrasePlay extends PartayBase {
 
   renderCluegiver() {
     return html`<div class="mt-5 p-3">
+      ${this.currentRound?.type === "emoji"
+        ? html`<phrase-moji></phrase-moji>`
+        : ""}
       <button
         @click=${() => {
           turnGuessed();
@@ -155,6 +159,14 @@ class PhrasePlay extends PartayBase {
   renderSpectator() {
     return html`
       <div class="text-center px-4 mt-8">
+        ${this.currentRound?.type === "emoji"
+          ? html`
+              <div class="m-3 text-center bg-gray-900 rounded p-4">
+                <h3 class="text-lg">Emoji Clue</h3>
+                <span class="text-3xl">${this.currentRound.emoji}</span>
+              </div>
+            `
+          : ""}
         <h3 class="text-2xl font-bold uppercase">
           ${this.playerTeam === this.guessingTeam ? "Guess Now!" : "Shhhhhh!"}
         </h3>
@@ -183,7 +195,7 @@ class PhrasePlay extends PartayBase {
       </p>
       ${this.isCluegiver
         ? html`<button
-            @click=${(e) => turnStart()}
+            @click=${() => turnStart()}
             class="mt-6 btn block w-full"
           >
             Start Your Turn

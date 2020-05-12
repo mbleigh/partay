@@ -11,9 +11,11 @@ import {
   roundScore,
 } from "../helpers/data";
 import { generateDeck, dealDeck } from "../phraseology/deck";
-import { SERVER_TIMESTAMP, increment } from "../firebase";
+import { SERVER_TIMESTAMP, logEvent } from "../firebase";
 import { generateTurnOrder, newGame } from "../helpers/phraseology";
-import { PhraseTeam, PhraseTurn, PhraseRound } from "../types";
+import { PhraseTeam, PhraseTurn } from "../types";
+
+const EVENT_PARAMS = { game: "phraseology" };
 
 /**
  * Triggered by a player to switch from their current team to the other team.
@@ -21,6 +23,7 @@ import { PhraseTeam, PhraseTurn, PhraseRound } from "../types";
 export async function lobbySwitchTeams(): Promise<void> {
   const { uid, game, room } = getState();
   const newTeam = game?.players[uid!]?.team === "red" ? "blue" : "red";
+  logEvent("switch_teams", EVENT_PARAMS);
   await roomRef().update({
     [`players/${uid}/team`]: newTeam,
   });
@@ -41,6 +44,7 @@ export async function lobbyShuffleTeams(): Promise<void> {
     update[`players/${uid}/team`] = newTeam;
     newTeam === "red" ? redCount++ : blueCount++;
   }
+  logEvent("shuffle_teams", EVENT_PARAMS);
   await roomRef().update(update);
 }
 /**
@@ -59,6 +63,7 @@ export async function lobbyStart(): Promise<void> {
     readies: generateReadies(),
     turn_order: generateTurnOrder(),
   });
+  logEvent("start_game", EVENT_PARAMS);
   await roomRef().update(update);
 }
 /**
@@ -74,6 +79,7 @@ export async function toggleDiscard(id: number): Promise<void> {
   } else if (discards.length >= 3) {
     return;
   } else {
+    logEvent("phrase_discard", { game: "phraseology", phrase_id: id });
     discards.push(id);
   }
   await roomRef().update({
@@ -131,6 +137,15 @@ export async function nextTurn(): Promise<void> {
   console.log(team, teamCursor, turn_order![team][teamCursor]);
   const player = turn_order![team][teamCursor];
 
+  if (currentTurn()) {
+    const t = currentTurn();
+    logEvent("phrase_turn_end", {
+      game: "phraseology",
+      guessed: t?.guessed?.length,
+      skipped: t?.skipped?.length,
+    });
+  }
+
   const ref = await roomRef()
     .child(`rounds/round${round}/turns`)
     .push({
@@ -177,6 +192,7 @@ export async function turnGuessed(): Promise<void> {
     cursor = 0;
   }
 
+  logEvent("phrase_guessed", { game: "phraseology", phrase_id: id });
   const update = {
     [currentRoundPath() + "/remaining"]: remaining,
     [currentTurnPath() + "/deck"]: deck,
@@ -186,6 +202,10 @@ export async function turnGuessed(): Promise<void> {
 
   // this round is over!
   if (remaining.length === 0) {
+    logEvent("phrase_round_end", {
+      game: "phraseology",
+      turn_count: Object.keys(currentRound()?.turns || {}).length,
+    });
     update[currentRoundPath() + "/end_time"] = SERVER_TIMESTAMP;
     update[currentRoundPath() + "/red_score"] = roundScore(
       getState().game!.round!,
@@ -211,6 +231,7 @@ export async function turnSkip(): Promise<void> {
   skipped.push(id);
   cursor = (cursor + 1) % turn.deck.length;
 
+  logEvent("phrase_skip", { game: "phraseology", phrase_id: id });
   await roomRef().update({
     [currentTurnPath() + "/skipped"]: skipped,
     [currentTurnPath() + "/cursor"]: cursor,
@@ -239,6 +260,7 @@ export async function startNextRound(): Promise<void> {
     });
   }
 
+  logEvent("phrase_round_start", EVENT_PARAMS);
   await roomRef().update({
     round: nextRound,
     [`rounds/round${nextRound}/start_time`]: SERVER_TIMESTAMP,
@@ -250,5 +272,12 @@ export async function playAgain(): Promise<void> {
   const game = getState().game!;
   const data = newGame(game.captain, "");
   data.players = game.players!;
+  logEvent("play_again", EVENT_PARAMS);
   await roomRef().set(data);
+}
+
+export async function updateEmoji(value: string): Promise<void> {
+  const { game } = getState();
+  const rn = game!.round!;
+  await roomRef().child("rounds").child(`round${rn}`).child("emoji").set(value);
 }

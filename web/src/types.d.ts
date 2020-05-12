@@ -21,6 +21,7 @@ export interface PhraseRound {
   red_score?: number;
   blue_score?: number;
   end_time?: number;
+  emoji?: string;
 }
 
 export interface Phrase {

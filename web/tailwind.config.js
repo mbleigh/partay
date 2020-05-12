@@ -1,4 +1,8 @@
 module.exports = {
+  purge: {
+    enabled: true,
+    content: ["./index.html", "./src/**/*.ts"],
+  },
   theme: {
     fontFamily: {
       display: ["Varela Round", "sans-serif"],
