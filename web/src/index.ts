@@ -28,3 +28,8 @@ document.getElementById("join")!.addEventListener("submit", async (e) => {
     document.getElementById("top-error")!.innerText = error!.message;
   }
 });
+
+document.getElementById("instructions-btn")!.addEventListener("click", (e) => {
+  document.getElementById("instructions-btn")!.classList.add("hidden");
+  document.getElementById("instructions")!.classList.remove("hidden");
+});

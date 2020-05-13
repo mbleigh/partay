@@ -12,11 +12,19 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      rel="shortcut icon"
+      href="/images/04f52743-0715-03a3-16d9-4a47e663afa7.webPlatform.png"
+    />
     <link rel="stylesheet" href="style/index.postcss" />
+    <link rel="manifest" href="/manifest.webmanifest" />
   </head>
   <body>
     <section id="zero" class="p-3 flex flex-col h-full">
       <h1 class="text-center text-2xl font-bold">Play Phraseology</h1>
+      <h2 class="text-center text-sm text-gray-400 mb-4">
+        (super-mega-alpha version)
+      </h2>
       <p class="text-center text-red-300 font-bold" id="top-error"></p>
       <form id="join">
         <div class="mt-2">
@@ -38,8 +46,97 @@
       </form>
 
       <button class="btn w-full mt-2" id="start">Start Game</button>
+
+      <button class="btn w-full mt-2" id="instructions-btn">How to Play</button>
+
+      <div
+        id="instructions"
+        class="hidden p-4 bg-gray-900 rounded text-lg mt-3"
+      >
+        <h2 class="text-center text-3xl font-bold my-3">How to Play</h2>
+        <p class="mb-3">
+          <b>Phraseology</b> is a team-based guessing game for 4-16 players. A
+          deck of phrases is constructed with each player seeing part of the
+          deck in advance. Players take turns trying to get their teams to guess
+          as many phrases as possible in one minute until all phrases have been
+          guessed.
+        </p>
+        <p class="mb-3">
+          Play takes place in three rounds, with <b>the same deck</b> used in
+          each round. Pay close attention, you'll need to remember what phrases
+          are out there to succeed in the later rounds.
+        </p>
+
+        <p class="mb-3">
+          In <b>Round One</b>, players can give any kind of clues they'd like -
+          anything except the words of the phrase itself!
+        </p>
+        <p class="mb-3">
+          In <b>Round Two</b>, players can only give <b>a single word</b> as the
+          clue for each phrase.
+        </p>
+        <p class="mb-3">
+          In <b>Round Three</b>, players must be silent and type out emoji as
+          the only clue for each phrase.
+        </p>
+        <p>
+          The team with the most guessed phrases across all rounds after round
+          three is the winner!
+        </p>
+      </div>
+      <p class="mt-8">
+        <a
+          href="https://forms.gle/UYgSQFXuMzq7qfoy5"
+          class="block font-bold text-center underline"
+          rel="noopener"
+          target="_blank"
+          >Contribute new phrases!</a
+        >
+      </p>
+      <p class="mt-8 text-lg text-center font-gray-300">
+        Created by
+        <a
+          class="underline"
+          href="https://twitter.com/mbleigh"
+          rel="noopener"
+          target="_blank"
+          >Michael Bleigh</a
+        >.<br />
+        Powered by
+        <a
+          class="underline"
+          href="https://firebase.google.com/"
+          target="_blank"
+          rel="noopener"
+          >Firebase</a
+        >.<br />
+        Open source on
+        <a
+          href="https://github.com/mbleigh/partay"
+          target="_blank"
+          rel="noopener"
+          class="underline"
+          >GitHub</a
+        >.
+      </p>
     </section>
     <phrase-game></phrase-game>
     <script src="src/index.ts"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        const x = "/sw.js";
+        navigator.serviceWorker
+          .register(x)
+          .then(function (registration) {
+            console.log(
+              "Registration successful, scope is:",
+              registration.scope
+            );
+          })
+          .catch(function (error) {
+            console.log("Service worker registration failed, error:", error);
+          });
+      }
+    </script>
   </body>
 </html>
