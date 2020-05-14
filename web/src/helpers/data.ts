@@ -16,6 +16,10 @@ export function asArray<T extends Keyable>(obj: { [key: string]: T }): T[] {
   return out;
 }
 
+export function userRef(): firebase.database.Reference {
+  return db.ref("users").child(getState().uid!);
+}
+
 export function roomRef(
   code?: string,
   game: GameType = "phraseology"

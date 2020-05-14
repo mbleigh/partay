@@ -3,7 +3,7 @@ import { SERVER_TIMESTAMP, logEvent } from "../firebase";
 import { getState, setState } from "../state";
 import { newGame } from "../helpers/phraseology";
 import page from "page";
-import { roomRef } from "../helpers/data";
+import { roomRef, userRef } from "../helpers/data";
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 function generateCode(size = 4): string {
@@ -23,6 +23,11 @@ export async function createRoom(game: GameType, name: string): Promise<void> {
   const code = generateCode();
   setState({ error: undefined });
   await roomRef(code, game).set(newGame(getState().uid!, name));
+  await userRef().update({
+    name,
+    last_room: code,
+    last_join_time: SERVER_TIMESTAMP,
+  });
   logEvent("create_room", { game });
   page(`/${code}`);
 }
@@ -93,8 +98,14 @@ export async function joinRoom(
 
   setState({ error: undefined });
   logEvent("join_room", { game });
+
   await ref.update({
     [`players/${uid}`]: { name, team, join_time: SERVER_TIMESTAMP },
+  });
+  await userRef().update({
+    name,
+    last_room: code,
+    last_join_time: SERVER_TIMESTAMP,
   });
 
   page(`/${code}`);

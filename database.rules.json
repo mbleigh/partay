@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "games": {
+      "phraseology": {
+        "rooms": {
+          "$roomId": {
+            ".write": "!data.exists() || newData.child('players').child(auth.uid).exists() || data.child('players').child(auth.uid).exists()",
+            ".read": true
+          } 
+        }
+      }
+    },
+    "users": {
+      "$uid": {
+        ".read": "auth.uid == $uid",
+      	".write": "auth.uid == $uid"
+      }
+    }
+  }
+}

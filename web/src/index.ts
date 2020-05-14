@@ -4,7 +4,15 @@ import "./routes";
 import "./listeners";
 import { createRoom, joinRoom } from "./actions/common";
 import { formValue } from "./helpers/html";
-import { getState } from "./state";
+import { getState, subscribe } from "./state";
+
+const unsub = subscribe(({ user }) => {
+  if (user?.name) {
+    (document.getElementById("join-name")! as HTMLInputElement).value =
+      user.name;
+    unsub();
+  }
+});
 
 document.getElementById("start")!.addEventListener("click", async (e) => {
   e.preventDefault();
