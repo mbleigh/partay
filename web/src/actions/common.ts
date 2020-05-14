@@ -21,6 +21,7 @@ export async function createRoom(game: GameType, name: string): Promise<void> {
     });
   }
   const code = generateCode();
+  setState({ error: undefined });
   await roomRef(code, game).set(newGame(getState().uid!, name));
   logEvent("create_room", { game });
   page(`/${code}`);
@@ -90,6 +91,7 @@ export async function joinRoom(
     team = Math.random() > 0.5 ? "red" : "blue";
   }
 
+  setState({ error: undefined });
   logEvent("join_room", { game });
   await ref.update({
     [`players/${uid}`]: { name, team, join_time: SERVER_TIMESTAMP },

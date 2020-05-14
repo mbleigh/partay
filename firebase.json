@@ -1,12 +1,8 @@
 {
   "hosting": {
-    "predeploy": "npm --prefix './web' run build",
+    "predeploy": "NODE_ENV=production npm --prefix './web' run build",
     "public": "web/dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
