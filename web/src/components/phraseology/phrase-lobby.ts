@@ -16,6 +16,7 @@ class PhraseLobby extends PartayBase {
   @property({ type: Boolean }) hasEnoughPlayers?: boolean = false;
   @property({ type: String }) captain?: string;
   @property({ type: Object }) players?: { [uid: string]: PhrasePlayer };
+  @property({ type: String }) playerName?: string;
 
   reduce(state: State) {
     console.log("reduce has been called");
@@ -24,6 +25,7 @@ class PhraseLobby extends PartayBase {
       Object.keys(state.game?.players || {}).length >= MIN_PLAYERS;
     this.captain = state.game?.captain;
     this.players = state.game?.players;
+    this.playerName = state.game?.players[state.uid!]?.name;
   }
 
   renderTeam(team: PhraseTeam) {
@@ -69,14 +71,28 @@ class PhraseLobby extends PartayBase {
     }
   }
 
+  async share() {
+    alert("sharing");
+    if ((navigator as any).share) {
+      await (navigator as any).share({
+        title: "Play Phraseology",
+        text: `${this.playerName} wants to play a game!`,
+        url: window.location.href,
+      });
+    }
+  }
+
   render() {
     return html`
       <h2 class="text-center p-3">Waiting for players&hellip;</h2>
+      <!--<div class="text-center">
+        <button @click=${this.share}>Share Game Link</button>
+      </div>-->
       <div class="flex-1 flex flex-row">
         <div class="flex-1">${this.renderTeam("red")}</div>
         <div class="flex-1">${this.renderTeam("blue")}</div>
       </div>
-      <div class="flex flex-col p-2">
+      <div class="flex flex-col p-2 bg-gray-900 md:rounded-t-lg">
         <button class="btn block mb-1" @click=${() => lobbySwitchTeams()}>
           Switch Teams
         </button>

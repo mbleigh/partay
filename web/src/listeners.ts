@@ -50,6 +50,8 @@ subscribe((state) => {
   } else if (!state.room && listeners.game) {
     listeners.game();
     listeners.game = null;
-    setState({ game: undefined });
+    if (state.game) {
+      setState({ game: undefined });
+    }
   }
 });

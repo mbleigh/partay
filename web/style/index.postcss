@@ -38,6 +38,10 @@ textarea {
   @apply bg-blue-700 text-white border-blue-800 border;
 }
 
+.fill-team-none {
+  @apply bg-gray-900 text-white border-gray-900 border;
+}
+
 .text-team-red {
   @apply text-pink-600;
 }
@@ -46,8 +50,13 @@ textarea {
   @apply text-blue-400;
 }
 
-[discarded] {
+.phrase-card-pick {
+  transition: opacity, transform 0.3s ease-out;
+}
+
+.phrase-card-pick[discarded] {
   opacity: 0.5;
+  transform: scale(0.9);
 }
 
 @tailwind utilities;

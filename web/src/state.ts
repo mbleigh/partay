@@ -4,7 +4,10 @@ import { State } from "./types";
 const store = createStore<State>({});
 
 const [setState, getState, subscribe] = [
-  store.setState,
+  (state: any) => {
+    console.log("setState", state);
+    return store.setState(state);
+  },
   store.getState,
   store.subscribe,
 ];
