@@ -63,7 +63,7 @@ export async function addPhrase(
   };
 
   if (consent) {
-    await db.ref("phrases").push(phraseData);
+    await db.ref("games/phraseology/phrases").push(phraseData);
   }
 
   await roomRef()

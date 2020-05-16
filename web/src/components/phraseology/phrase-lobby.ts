@@ -83,6 +83,10 @@ class PhraseLobby extends PartayBase {
     const phrase = formValue("#add-phrase");
     const clue = formValue("#add-clue");
 
+    if (phrase === "" || phrase.length === 1) {
+      return;
+    }
+
     await addPhrase(phrase, clue, this.phraseConsent);
     (e.target as HTMLFormElement).reset();
     this.showPhraseForm = false;
@@ -148,9 +152,12 @@ class PhraseLobby extends PartayBase {
           .showPhraseForm
           ? ""
           : " hidden"}"
+        @click=${(e: Event) => {
+          if (e.target === e.currentTarget) this.showPhraseForm = false;
+        }}
       >
         <form
-          class="bg-gray-800 mx-auto rounded-lg w-64"
+          class="bg-gray-800 mx-auto rounded-lg w-64 relative"
           @submit=${this.addPhrase}
         >
           <h3 class="text-center font-bold mb-5 rounded-t bg-gray-900 p-3">
@@ -171,7 +178,8 @@ class PhraseLobby extends PartayBase {
             <p class="text-sm text-center mt-2">
               <button
                 type="button"
-                @click=${() => {
+                @click=${(e: Event) => {
+                  (e.target as HTMLButtonElement).blur();
                   this.phraseConsent = !this.phraseConsent;
                 }}
                 class="bg-gray-900 rounded px-2 p-1"
@@ -182,6 +190,15 @@ class PhraseLobby extends PartayBase {
             </p>
             <button type="submit" class="my-3 btn block mb-1">
               Submit Phrase
+            </button>
+            <button
+              type="button"
+              class="bg-black rounded-full m-4 w-6 h-6 text-center absolute top-0 right-0"
+              @click=${() => {
+                this.showPhraseForm = false;
+              }}
+            >
+              <i class="material-icons">close</i>
             </button>
           </div>
         </form>

@@ -6,14 +6,20 @@
           "$roomId": {
             ".write": "!data.exists() || newData.child('players').child(auth.uid).exists() || data.child('players').child(auth.uid).exists()",
             ".read": true
-          } 
+          }
+        },
+        "phrases": {
+          "$id": {
+            ".read": false,
+            ".write": "auth.uid == newData.child('player').val()"
+          }
         }
       }
     },
     "users": {
       "$uid": {
         ".read": "auth.uid == $uid",
-      	".write": "auth.uid == $uid"
+        ".write": "auth.uid == $uid"
       }
     }
   }
