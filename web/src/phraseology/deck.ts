@@ -1,5 +1,6 @@
 import { phrases } from "./data/phrases.json";
 import { Phrase } from "../types";
+import { getState } from "../state";
 
 const PHRASE_IDS = phrases.map((p) => p.id);
 const PHRASE_ID_MAP: { [id: number]: Phrase } = phrases.reduce(
@@ -16,24 +17,43 @@ export function generateDeck(size = 40): number[] {
 }
 
 export function expandDeck(ids: number[]): Phrase[] {
-  return ids.map((id) => PHRASE_ID_MAP[id]);
+  return ids.map((id) => expandPhrase(id));
 }
 
 export function expandPhrase(id: number): Phrase {
+  if (id >= 1000000) {
+    return getState().game!.custom_phrases!.find((p) => p.id === id)!;
+  }
   return PHRASE_ID_MAP[id];
 }
 
 export function dealDeck(
   ids: number[],
-  buckets: string[]
+  buckets: string[],
+  customPhrases: Phrase[]
 ): { [bucket: string]: number[] } {
   const randids: number[] = ids.slice().sort(() => Math.random() - 0.5);
   const out: { [bucket: string]: number[] } = {};
-  let i = 0;
+  buckets.forEach((b) => (out[b] = []));
+
+  customPhrases.forEach((p) => {
+    const key = `players/${p.player!}/deck`;
+    out[key] = out[key] || [];
+    out[key].push(p.id);
+  });
+  console.log("with customs", out);
+
   while (randids.length) {
-    out[buckets[i]] = out[buckets[i]] || [];
-    out[buckets[i]].push(randids.pop()!);
-    i = (i + 1) % buckets.length;
+    let bucket: string;
+    let minOut = 9999;
+    for (const b in out) {
+      if (out[b].length < minOut) {
+        bucket = b;
+        minOut = out[b].length;
+      }
+    }
+    out[bucket!] = out[bucket!] || [];
+    out[bucket!].push(randids.pop()!);
   }
   return out;
 }

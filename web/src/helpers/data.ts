@@ -4,6 +4,7 @@ import {
   PhraseTurn,
   PhraseRound,
   PhraseTeam,
+  PhrasePlayer,
 } from "../types";
 import { db } from "../firebase";
 import { getState } from "../state";
@@ -88,4 +89,9 @@ export function roundScore(roundNumber: number, team: PhraseTeam): number {
   }
 
   return score;
+}
+
+export function currentPlayer(): PhrasePlayer | null {
+  if (!getState().uid) return null;
+  return getState().game?.players?.[getState().uid!] || null;
 }

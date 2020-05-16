@@ -9,11 +9,12 @@ import {
   currentRoundPath,
   currentTurnPath,
   roundScore,
+  currentPlayer,
 } from "../helpers/data";
 import { generateDeck, dealDeck } from "../phraseology/deck";
-import { SERVER_TIMESTAMP, logEvent } from "../firebase";
+import { SERVER_TIMESTAMP, logEvent, db } from "../firebase";
 import { generateTurnOrder, newGame } from "../helpers/phraseology";
-import { PhraseTeam, PhraseTurn } from "../types";
+import { PhraseTeam, PhraseTurn, PhraseGame, Phrase } from "../types";
 
 const EVENT_PARAMS = { game: "phraseology" };
 
@@ -47,17 +48,50 @@ export async function lobbyShuffleTeams(): Promise<void> {
   logEvent("shuffle_teams", EVENT_PARAMS);
   await roomRef().update(update);
 }
+
+export async function addPhrase(
+  phrase: string,
+  clue: string,
+  consent: boolean
+): Promise<void> {
+  let phraseData: Partial<Phrase> = {
+    set: "custom",
+    phrase,
+    clue,
+    player: getState().uid,
+    attribution: currentPlayer()?.name,
+  };
+
+  if (consent) {
+    await db.ref("phrases").push(phraseData);
+  }
+
+  await roomRef()
+    .child("custom_phrases")
+    .transaction((data: Phrase[] | null) => {
+      data = data || [];
+      phraseData.id = 1000000 + data.length;
+      data.push(phraseData as Phrase);
+      return data;
+    });
+}
+
 /**
  * Triggered by the game captain to begin the game when everyone is in.
  */
 export async function lobbyStart(): Promise<void> {
-  const pool = generateDeck();
+  const playerArray = asArray(getState().game!.players!);
+  const customPhrases = getState().game!.custom_phrases || [];
+  const pool = generateDeck(
+    Math.min(playerArray.length * 10 - customPhrases.length, 80)
+  );
   const update: { [key: string]: any } = dealDeck(
     pool,
-    asArray(getState().game!.players!).map((p) => `players/${p.key}/deck`)
+    playerArray.map((p) => `players/${p.key}/deck`),
+    customPhrases
   );
   Object.assign(update, {
-    pool,
+    pool: pool.concat(customPhrases.map((p) => p.id)),
     start_time: SERVER_TIMESTAMP,
     state: "prep",
     readies: generateReadies(),

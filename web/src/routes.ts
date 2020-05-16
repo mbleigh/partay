@@ -8,7 +8,7 @@ page("/", () => {
 
 page("/:room", (ctx) => {
   console.log("page /:room");
-  setState({ room: ctx.params.room });
+  setState({ room: ctx.params.room.toUpperCase() });
 });
 
 page.start();

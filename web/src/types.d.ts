@@ -29,9 +29,11 @@ export interface Phrase {
   id: number;
   phrase: string;
   clue: string;
-  // tags: string[];
-  // franchise: string;
-  // rating: string;
+  tags?: string[] | null;
+  franchise?: string | null;
+  rating?: string | null;
+  player?: string | null;
+  attribution?: string | null;
 }
 
 export interface Keyable {
@@ -75,6 +77,7 @@ export interface PhraseGame {
     blue: string[];
     blue_cursor: number;
   } | null;
+  custom_phrases?: Phrase[];
 }
 
 export interface GameError {

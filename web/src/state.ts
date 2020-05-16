@@ -5,7 +5,9 @@ const store = createStore<State>({});
 
 const [setState, getState, subscribe] = [
   (state: any) => {
-    console.log("setState", state);
+    if ((window as any).DEBUG) {
+      console.log("setState", state);
+    }
     return store.setState(state);
   },
   store.getState,
