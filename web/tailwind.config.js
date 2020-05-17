@@ -1,6 +1,9 @@
 module.exports = {
   purge: {
     content: ["./index.html", "./src/**/*.ts"],
+    options: {
+      whitelist: ["absolute", "top-0", "right-0"],
+    },
   },
   theme: {
     fontFamily: {

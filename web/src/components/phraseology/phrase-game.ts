@@ -38,10 +38,10 @@ class PhraseGame extends PartayBase {
 
     this.playerNames = asArray(state.game.players).map((p) => p.name);
 
-    this.name = state.game.players[state.uid!]?.name;
+    this.name = state.game.players?.[state.uid!]?.name;
     this.state = state.game.state;
     this.room = state.room;
-    this.team = state.game.players[state.uid!]?.team;
+    this.team = state.game.players?.[state.uid!]?.team;
   }
 
   renderLoading() {
@@ -123,12 +123,20 @@ class PhraseGame extends PartayBase {
             </p>`
           : ""}
         <header
-          class="flex flex-row py-1 px-2 text-l fill-team-${this.team ||
+          class="flex flex-row py-2 px-2 text-l fill-team-${this.team ||
           "none"}"
         >
           <span class="flex-1">${this.name}</span>
           <span>${this.room}</span>
-          <span @click=${() => leaveRoom()} class="ml-2">X</span>
+          <button
+            type="button"
+            class="bg-overlay rounded-full mt-1 mr-1 ml-3 w-6 h-6 text-center"
+            @click=${() => {
+              leaveRoom();
+            }}
+          >
+            <i class="material-icons">close</i>
+          </button>
         </header>
         ${this.renderStatePage()}
       </div>

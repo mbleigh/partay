@@ -3,7 +3,7 @@ import { SERVER_TIMESTAMP, logEvent } from "../firebase";
 import { getState, setState } from "../state";
 import { newGame } from "../helpers/phraseology";
 import page from "page";
-import { roomRef, userRef } from "../helpers/data";
+import { roomRef, userRef, currentPlayer } from "../helpers/data";
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 function generateCode(size = 4): string {
@@ -116,8 +116,11 @@ export async function leaveRoom(): Promise<void> {
     return;
   }
 
-  await roomRef().update({
-    [`players/${getState().uid}`]: null,
-  });
+  if (currentPlayer()) {
+    await roomRef().update({
+      [`players/${getState().uid}`]: null,
+    });
+  }
+
   page("/");
 }

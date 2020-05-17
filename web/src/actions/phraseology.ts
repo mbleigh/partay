@@ -66,6 +66,10 @@ export async function addPhrase(
     await db.ref("games/phraseology/phrases").push(phraseData);
   }
 
+  logEvent(
+    "phrase_add_custom",
+    Object.assign({ allow_use: consent }, EVENT_PARAMS)
+  );
   await roomRef()
     .child("custom_phrases")
     .transaction((data: Phrase[] | null) => {
