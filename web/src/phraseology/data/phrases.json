@@ -829,6 +829,80 @@
       ],
       "rating": "G",
       "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 64,
+      "phrase": "Mister Spock",
+      "clue": "Star Trek's Bad Ass Vulcan",
+      "franchise": "Star Trek",
+      "tags": [
+        "TV"
+      ],
+      "rating": "PG-13",
+      "attribution": "Franklin Wu"
+    },
+    {
+      "set": "core",
+      "id": 65,
+      "phrase": "Frank Lloyd Wright",
+      "clue": "America's Premier 20th Century Architect",
+      "franchise": null,
+      "tags": [
+        "Famous People"
+      ],
+      "rating": "G",
+      "attribution": "Franklin Wu"
+    },
+    {
+      "set": "core",
+      "id": 66,
+      "phrase": "RMS Titanic",
+      "clue": "Lost badly in contest against iceberg",
+      "franchise": null,
+      "tags": [
+        "History"
+      ],
+      "rating": "G",
+      "attribution": "Franklin Wu"
+    },
+    {
+      "set": "core",
+      "id": 67,
+      "phrase": "Fender Stratocaster",
+      "clue": "Electric guitar model favored by rock musicians",
+      "franchise": null,
+      "tags": [
+        "Music"
+      ],
+      "rating": "G",
+      "attribution": "Franklin Wu"
+    },
+    {
+      "set": "core",
+      "id": 68,
+      "phrase": "Pusheen",
+      "clue": "A female cartoon cat used in online comic strips and sticker packs.",
+      "franchise": null,
+      "tags": [
+        "Internet",
+        "Characters"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 69,
+      "phrase": "Gudetama",
+      "clue": "A Sanrio (of Hello Kitty fame) character, this sentient egg is very lazy.",
+      "franchise": null,
+      "tags": [
+        "Characters",
+        "Internet"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
     }
   ]
 }
