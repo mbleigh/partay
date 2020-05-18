@@ -903,6 +903,535 @@
       ],
       "rating": "G",
       "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 70,
+      "phrase": "Jolly Roger",
+      "clue": "Another name for the \"skull and crossbones\" flag flown by pirate ships.",
+      "franchise": null,
+      "tags": [
+        "Trivia"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 71,
+      "phrase": "Xenomorph",
+      "clue": "The more \"scientific\" name for the terrifying creatures from the \"Alien\" movies.",
+      "franchise": "Alien",
+      "tags": [
+        "Sci-Fi",
+        "Horror",
+        "Movies"
+      ],
+      "rating": "PG-13",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 72,
+      "phrase": "Ellen Ripley",
+      "clue": "Sigourney Weaver played this flamethrower-toting protagonist of the \"Alien\" movies.",
+      "franchise": "Alien",
+      "tags": [
+        "Sci-Fi",
+        "Horror",
+        "Movies"
+      ],
+      "rating": "PG-13",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 73,
+      "phrase": "Sonic Screwdriver",
+      "clue": "This helpful tool is a time lord's best friend and seems to do...a little bit of everything? Someone call The Doctor!",
+      "franchise": "Doctor Who",
+      "tags": [
+        "Sci-Fi",
+        "TV"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 74,
+      "phrase": "90 Day Fiance",
+      "clue": "TLC reality show following couples aiming to get married before a K-1 visa expires.",
+      "franchise": null,
+      "tags": [
+        "TV",
+        "Reality TV"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 75,
+      "phrase": "Let It Go",
+      "clue": "Frozen's iconic song about embracing oneself, sung by Idina Menzel.",
+      "franchise": "Frozen",
+      "tags": [
+        "Disney",
+        "Movies",
+        "Music"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 76,
+      "phrase": "honey badger",
+      "clue": "This fierce mustelid native to Africa and parts of Asia was famously narrated as \"not giving a s**t\" by Randall in a YouTube video.",
+      "franchise": null,
+      "tags": [
+        "Nature"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 77,
+      "phrase": "sleeves",
+      "clue": "A colloquial term for tattoos that cover the entirety of a person's arms.",
+      "franchise": null,
+      "tags": [
+        "Culture",
+        "Language"
+      ],
+      "rating": "PG",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 78,
+      "phrase": "faux pas",
+      "clue": "An embarrassing or tactless remark or behavior in a social situation. Of French origin.",
+      "franchise": null,
+      "tags": [
+        "Language"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 79,
+      "phrase": "Elphaba",
+      "clue": "The \"real name\" of the Wicked Witch of the West from The Wizard of Oz, according to musical \"Wicked.\"",
+      "franchise": null,
+      "tags": [
+        "Musicals",
+        "Fantasy"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 80,
+      "phrase": "Monstars",
+      "clue": "The rival team battling Michael Jordan and the Toon Squad in 1996's \"Space Jam.\"",
+      "franchise": null,
+      "tags": [
+        "Sports",
+        "Movies",
+        "1990s"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 81,
+      "phrase": "Ziggy Stardust",
+      "clue": "Omnisexual alien rock star and alter ego of the immortal David Bowie.",
+      "franchise": null,
+      "tags": [
+        "Music"
+      ],
+      "rating": "PG",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 82,
+      "phrase": "Hans Gruber",
+      "clue": "Alan Rickman played this iconic villain opposite Bruce Willis in \"Die Hard.\"",
+      "franchise": "Die Hard",
+      "tags": [
+        "Movies",
+        "Action",
+        "1980s"
+      ],
+      "rating": "PG",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 83,
+      "phrase": "Nobody puts Baby in a corner.",
+      "clue": "A nonsensical yet somehow immortal line spoken by Patrick Swayze in \"Dirty Dancing.\"",
+      "franchise": null,
+      "tags": [
+        "Movies",
+        "Music",
+        "1980s"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 84,
+      "phrase": "Frank Abagnale",
+      "clue": "The real life con artist who inspired the movie \"Catch Me if You Can.\"",
+      "franchise": null,
+      "tags": [
+        "History",
+        "Movies",
+        "People"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 85,
+      "phrase": "Dr. Manhattan",
+      "clue": "This bright blue nearly-omnipotent character is a central figure in the Watchmen universe.",
+      "franchise": "Watchmen",
+      "tags": [
+        "Comics",
+        "Movies"
+      ],
+      "rating": "PG-13",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 86,
+      "phrase": "Cobra Kai",
+      "clue": "The \"villainous\" dojo with questionable ethics from Karate Kid. \"Sweep the leg!\"",
+      "franchise": null,
+      "tags": [
+        "Movies",
+        "1980s"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 87,
+      "phrase": "double rainbow",
+      "clue": "A rare atmospheric phenomenon captured with awe in a video by Paul \"Bear\" Vasquez. \"So intense!\"",
+      "franchise": null,
+      "tags": [
+        "Memes",
+        "Internet",
+        "Nature"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 88,
+      "phrase": "Play-Doh",
+      "clue": "A brightly colored modeling putty for kids that comes in bright yellow plastic tubs.",
+      "franchise": null,
+      "tags": [
+        "Toys",
+        "Kids"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 89,
+      "phrase": "Planet Express",
+      "clue": "The name of the delivery company for which the main characters of Futurama work.",
+      "franchise": "Futurama",
+      "tags": [
+        "TV",
+        "Sci-Fi"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 90,
+      "phrase": "Beanie Babies",
+      "clue": "Created by Ty Warner, these plush toys saw a speculative collectors' frenzy in the 1990s.",
+      "franchise": null,
+      "tags": [
+        "Toys",
+        "Kids"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 91,
+      "phrase": "Protoss",
+      "clue": "An advanced alien civilization from Aiur and one of three playable races from Blizzard's StarCraft series.",
+      "franchise": "StarCraft",
+      "tags": [
+        "Video Games",
+        "Blizzard"
+      ],
+      "rating": "PG",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 92,
+      "phrase": "Freddy Krueger",
+      "clue": "Dream-haunting monster from the \"Nightmare on Elm Street\" movies. Don't fall asleep!",
+      "franchise": null,
+      "tags": [
+        "Horror",
+        "Characters"
+      ],
+      "rating": "PG-13",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 93,
+      "phrase": "Large Hadron Collider",
+      "clue": "The largest particle accelerator on the planet, operated by CERN in Geneva, Switzerland.",
+      "franchise": null,
+      "tags": [
+        "Science"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 94,
+      "phrase": "Yeti",
+      "clue": "Also called the \"Abominable Snowman,\" this mythical creature is said to inhabit the Himalayan mountains.",
+      "franchise": null,
+      "tags": [
+        "Cryptids",
+        "Nature",
+        "Mythology"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 95,
+      "phrase": "Dramatic Chipmunk",
+      "clue": "A prairie dog in actuality, this viral video features the animal turning suddenly to a swelling orchestra. \"Dun dun dunnnnn!\"",
+      "franchise": null,
+      "tags": [
+        "Memes",
+        "Internet"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 96,
+      "phrase": "thumb war",
+      "clue": "A game where you clasp hands and try to \"capture\" the other's digit. \"1, 2, 3, 4, I declare a...\"",
+      "franchise": null,
+      "tags": [
+        "Culture",
+        "Kids"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 97,
+      "phrase": "Agatha Christie",
+      "clue": "Prolific English author of detective stories including \"Murder on the Orient Express.\"",
+      "franchise": null,
+      "tags": [
+        "People",
+        "Literature"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 98,
+      "phrase": "Maui",
+      "clue": "One of the Hawaiian islands as well as a mythical demigod featured in the movie Moana.",
+      "franchise": null,
+      "tags": [
+        "History",
+        "Mythology",
+        "Movies",
+        "Disney"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 99,
+      "phrase": "Pavlov's Dog",
+      "clue": "Experiment demonstrating classical conditioning in which a canine was trained to salivate when a bell rang, anticipating food.",
+      "franchise": null,
+      "tags": [
+        "Science"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 100,
+      "phrase": "subtweeting",
+      "clue": "On Twitter, the act of referring to a specific person or situation (usually negatively) indirectly and vaguely.",
+      "franchise": null,
+      "tags": [
+        "Internet",
+        "Culture"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 101,
+      "phrase": "Pillsbury Dough Boy",
+      "clue": "Baked goods mascot known for going \"Hoo hoo!\" when his belly is poked.",
+      "franchise": null,
+      "tags": [
+        "Characters",
+        "Mascots",
+        "Companies"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 102,
+      "phrase": "CRISPR",
+      "clue": "A technique that uses an enzyme targeting a specific DNA sequence to enable powerful gene editing.",
+      "franchise": null,
+      "tags": [
+        "Science"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 103,
+      "phrase": "Is that your final answer?",
+      "clue": "Catchphrase from the game show \"Who Wants to be a Millionaire?\"",
+      "franchise": null,
+      "tags": [
+        "TV",
+        "Catchphrases"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 104,
+      "phrase": "Arkham Asylum",
+      "clue": "The criminal psychiatric facility that lodges many of Batman's foes (when they haven't escaped).",
+      "franchise": "Batman",
+      "tags": [
+        "Comics",
+        "Movies",
+        "Places"
+      ],
+      "rating": "PG",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 105,
+      "phrase": "selfie stick",
+      "clue": "This extendable phone accessory can assist with front-facing camera shots, but is loathed by some.",
+      "franchise": null,
+      "tags": [
+        "Culture",
+        "Tech"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 106,
+      "phrase": "pinky swear",
+      "clue": "A way to signal the force of a truthful statement by interlocking little fingers with someone.",
+      "franchise": null,
+      "tags": [
+        "Culture",
+        "Kids",
+        "Language"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 107,
+      "phrase": "Diagon Alley",
+      "clue": "Pick up your wizarding supplies at this shopping district found behind the Leaky Cauldron in London.",
+      "franchise": "Harry Potter",
+      "tags": [
+        "Literature",
+        "Movies",
+        "Fantasy",
+        "Places"
+      ],
+      "rating": "PG",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 108,
+      "phrase": "Morpheus",
+      "clue": "Part of the human resistance fighting the machines in \"The Matrix,\" he introduces Neo to the real world.",
+      "franchise": "The Matrix",
+      "tags": [
+        "Sci-Fi",
+        "Movies",
+        "Characters"
+      ],
+      "rating": "PG",
+      "attribution": "Michael B."
+    },
+    {
+      "set": "core",
+      "id": 109,
+      "phrase": "Pangaea",
+      "clue": "Hundreds of millions of years ago all land on Earth was part of this supercontinent.",
+      "franchise": null,
+      "tags": [
+        "Science"
+      ],
+      "rating": "G",
+      "attribution": "Michael B."
     }
   ]
 }
