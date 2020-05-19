@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const { writeFileSync } = require("fs");
+const { lib } = require("emojilib");
+
+const out = { direct: {}, indirect: {} };
+const dups = {};
+
+for (const keyword in lib) {
+  const moji = lib[keyword];
+  out.direct[keyword] = moji.char;
+  for (const alt of moji.keywords) {
+    if (out.indirect[alt]) {
+      dups[alt] = dups[alt] || [];
+      dups[alt].push(moji.char);
+    } else {
+      out.indirect[alt] = moji.char;
+    }
+  }
+}
+
+out.indirect = Object.assign(out.indirect, {
+  // overrides
+});
+
+console.log("== DUPLICATES FOUND ==");
+for (const k in dups) {
+  console.log(k, dups[k].join(" "));
+}
+
+writeFileSync(
+  __dirname + "/../web/src/phraseology/data/emoji.json",
+  JSON.stringify(out),
+  { encoding: "utf8" }
+);

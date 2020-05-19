@@ -1,114 +1,114 @@
 {
-    "dir": "ltr",
-    "lang": "English",
-    "name": "Partay Games",
-    "scope": "/",
-    "display": "standalone",
-    "start_url": "https://partay.live/",
-    "short_name": "Partay",
-    "theme_color": "transparent",
-    "description": "Social games for nerds.",
-    "orientation": "portrait",
-    "background_color": "transparent",
-    "related_applications": [],
-    "prefer_related_applications": false,
-    "icons": [
-        {
-            "src": "/images/55c6b976-c12a-6dde-d491-66fcfecd1b7e.webPlatform.png",
-            "sizes": "44x44",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/e77784d8-b5f8-1118-3b7b-a8701a1b9573.webPlatform.png",
-            "sizes": "48x48",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/8fe881ec-cd0f-9d40-5894-fd2f253677e7.webPlatform.png",
-            "sizes": "1240x600",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/88d7ce2a-8f2a-505e-5f95-f5e98344eb96.webPlatform.png",
-            "sizes": "300x300",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/e68ebae9-77b7-f87a-f7f7-348292b03788.webPlatform.png",
-            "sizes": "150x150",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/c27ba34d-ac0b-0e45-6d22-1f8b4c9bb01e.webPlatform.png",
-            "sizes": "88x88",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/c8c1e144-2d07-3dc6-8252-ee07e99ee25b.webPlatform.png",
-            "sizes": "24x24",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/b608ecb4-e624-4961-c637-c1d543bd20fb.webPlatform.png",
-            "sizes": "50x50",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/c44659ea-70b7-c2df-b0a8-647f4864596e.webPlatform.png",
-            "sizes": "620x300",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/20678441-ca1e-c0e3-52bb-a045b001820f.webPlatform.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/6e882019-cbd5-c377-bf26-d3f61a2dbd9b.webPlatform.png",
-            "sizes": "144x144",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/04f52743-0715-03a3-16d9-4a47e663afa7.webPlatform.png",
-            "sizes": "96x96",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/8afae5c9-611a-2223-019e-d552d785cd28.webPlatform.png",
-            "sizes": "72x72",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/1336560a-c4ae-0011-7c57-0493f1b3c40e.webPlatform.png",
-            "sizes": "36x36",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/09e0c109-4e6b-6c5d-08e5-76f92f0a06c0.webPlatform.png",
-            "sizes": "1024x1024",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/6dc08694-2aae-bb2f-9c44-c7af058217da.webPlatform.png",
-            "sizes": "180x180",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/889fbf73-c3e3-5cdb-0aa7-77d92254251f.webPlatform.png",
-            "sizes": "152x152",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/97ed6e4b-dcff-9e01-b0fd-8279bd28ce7e.webPlatform.png",
-            "sizes": "120x120",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/f51acfaf-e330-9e1a-9074-979b07b9d4d5.webPlatform.png",
-            "sizes": "76x76",
-            "type": "image/png"
-        }
-    ],
-    "url": "https://partay.live",
-    "screenshots": []
+  "dir": "ltr",
+  "lang": "English",
+  "name": "Partay Games",
+  "scope": "/",
+  "display": "standalone",
+  "start_url": "https://partay.live/",
+  "short_name": "Partay",
+  "theme_color": "#1a202c",
+  "description": "Social games for nerds.",
+  "orientation": "portrait",
+  "background_color": "#1a202c",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/images/55c6b976-c12a-6dde-d491-66fcfecd1b7e.webPlatform.png",
+      "sizes": "44x44",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/e77784d8-b5f8-1118-3b7b-a8701a1b9573.webPlatform.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/8fe881ec-cd0f-9d40-5894-fd2f253677e7.webPlatform.png",
+      "sizes": "1240x600",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/88d7ce2a-8f2a-505e-5f95-f5e98344eb96.webPlatform.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/e68ebae9-77b7-f87a-f7f7-348292b03788.webPlatform.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/c27ba34d-ac0b-0e45-6d22-1f8b4c9bb01e.webPlatform.png",
+      "sizes": "88x88",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/c8c1e144-2d07-3dc6-8252-ee07e99ee25b.webPlatform.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/b608ecb4-e624-4961-c637-c1d543bd20fb.webPlatform.png",
+      "sizes": "50x50",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/c44659ea-70b7-c2df-b0a8-647f4864596e.webPlatform.png",
+      "sizes": "620x300",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/20678441-ca1e-c0e3-52bb-a045b001820f.webPlatform.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/6e882019-cbd5-c377-bf26-d3f61a2dbd9b.webPlatform.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/04f52743-0715-03a3-16d9-4a47e663afa7.webPlatform.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/8afae5c9-611a-2223-019e-d552d785cd28.webPlatform.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/1336560a-c4ae-0011-7c57-0493f1b3c40e.webPlatform.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/09e0c109-4e6b-6c5d-08e5-76f92f0a06c0.webPlatform.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/6dc08694-2aae-bb2f-9c44-c7af058217da.webPlatform.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/889fbf73-c3e3-5cdb-0aa7-77d92254251f.webPlatform.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/97ed6e4b-dcff-9e01-b0fd-8279bd28ce7e.webPlatform.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/f51acfaf-e330-9e1a-9074-979b07b9d4d5.webPlatform.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    }
+  ],
+  "url": "https://partay.live",
+  "screenshots": []
 }

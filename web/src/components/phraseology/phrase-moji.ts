@@ -4,59 +4,76 @@ import { property } from "lit-element";
 import { updateEmoji } from "../../actions/phraseology";
 import { currentRound } from "../../helpers/data";
 import { State } from "../../types";
-import EmojiButton from "@joeattardi/emoji-button";
+
+import { direct, indirect } from "../../phraseology/data/emoji.json";
+import emojiRegexFactory from "emoji-regex";
 
 class PhraseMoji extends PartayBase {
+  @property({ type: String }) rawValue: string = "";
   @property({ type: String }) value: string = "";
-
-  emojiButton?: EmojiButton;
 
   connectedCallback() {
     super.connectedCallback();
-    this.emojiButton = new EmojiButton({
-      theme: "dark",
-      autoHide: false,
-      position: "bottom",
-      emojiSize: "1.4em",
-    });
-
-    this.emojiButton.on("emoji", (emoji) => {
-      updateEmoji(this.input().value + emoji);
-    });
   }
 
-  input(): HTMLInputElement {
-    return this.querySelector("input")! as HTMLInputElement;
+  get textarea(): HTMLTextAreaElement {
+    return this.querySelector("textarea")! as HTMLTextAreaElement;
   }
 
   reduce(state: State) {
     const emoji = currentRound()?.emoji;
-    const el = this.querySelector("input");
-    if (el && emoji !== el?.value) {
-      el.value = emoji || "";
+    if (this.textarea && emoji !== this.value) {
+      this.textarea.value = emoji || "";
+      this.updateValue();
+      this.textarea.focus();
     }
-  }
-
-  toggleEmojiPicker() {
-    console.log("showpicker");
-    this.emojiButton?.togglePicker(this.input());
   }
 
   render() {
     return html`
-      <div class="flex flex-row px-2">
-        <input
-          class="flex-1 bg-gray-900 border border-gray-700 p-3"
-          @input=${(e: Event) => updateEmoji(this.input().value)}
-        />
-        <button
-          @click=${this.toggleEmojiPicker}
-          class="p-3 bg-gray-900 border border-gray-700"
-        >
-          <i class="material-icons">insert_emoticon</i>
-        </button>
+      <div class="flex flex-col">
+        <div class="bg-gray-900 rounded p-2 px-3 text-center mb-2 h-12">
+          ${this.value}
+        </div>
+        <textarea
+          class="block flex-1 bg-gray-900 border border-gray-700 p-3 text-sm"
+          @input=${this.updateValue}
+        ></textarea>
+        <div class="text-xs mt-2 mb-3 text-center">
+          Enter emoji or type emoji keywords (<code>with_underscores</code>) to
+          send your clue.
+        </div>
       </div>
     `;
+  }
+
+  translateEmoji(value: string): string {
+    return value
+      .toLowerCase()
+      .split(" ")
+      .map((word) => {
+        if ((direct as any)[word]) {
+          return (direct as any)[word];
+        } else if ((indirect as any)[word]) {
+          return (indirect as any)[word];
+        }
+
+        let emojiInWord: string[] = [];
+        const emojiRegex = emojiRegexFactory();
+        let match;
+        while ((match = emojiRegex.exec(word))) {
+          emojiInWord.push(match[0]);
+        }
+        console.log("found emoji:", emojiInWord);
+        return emojiInWord.join("");
+      })
+      .join("");
+  }
+
+  updateValue() {
+    this.rawValue = this.textarea.value;
+    this.value = this.translateEmoji(this.rawValue);
+    updateEmoji(this.value);
   }
 }
 
