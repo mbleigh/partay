@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@joeattardi/emoji-button": "^3.0.3",
+    "@joeattardi/emoji-button": "^4.6.2",
     "@types/page": "^1.8.0",
     "emoji-regex": "^9.0.0",
     "emojilib": "^2.4.0",
